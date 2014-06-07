@@ -32,7 +32,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
+    [self.view addGestureRecognizer:gestureRecognizer];
 }
 
 - (void)didReceiveMemoryWarning
@@ -41,15 +43,94 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark - Signup Handler
+- (IBAction)performSignup:(id)sender {
+    
+    if (![self validEmail]) {
+        UIAlertView *alert = [[UIAlertView alloc] init];
+        
+        NSString *title = @"Erro ao cadastrar";
+        NSString *message = @"Por favor, insira um email válido.";
+        
+        alert = [alert initWithTitle:title message:message delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+        return;
+    }
+    
+    if (![self.pwdField.text isEqualToString:self.rpwdField.text]) {
+        UIAlertView *alert = [[UIAlertView alloc] init];
+        
+        NSString *title = @"Erro ao cadastrar";
+        NSString *message = @"As senhas devem ser iguais";
+        
+        alert = [alert initWithTitle:title message:message delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+        return;
+    }
+    
+    if (self.pwdField.text.length < 6 || self.rpwdField.text.length < 6) {
+        UIAlertView *alert = [[UIAlertView alloc] init];
+        
+        NSString *title = @"Erro ao cadastrar";
+        NSString *message = @"Sua senha deve conter pelo menos 6 caracteres.";
+        
+        alert = [alert initWithTitle:title message:message delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+        return;
+    }
+    
+    AHUser *myUser = [[AHUser alloc] initWithUsername:self.emailField.text andPassword:self.pwdField.text];
+    [myUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (succeeded) {
+            NSLog(@"SUCCESS: %d", succeeded);
+            [self performSegueWithIdentifier:@"successSignup" sender:self];
+        } else {
+            NSLog(@"ERROR: %@", error);
+            UIAlertView *alert = [[UIAlertView alloc] init];
+            
+            NSString *title = @"Erro ao cadastrar";
+            NSString *message = @"";
+            
+            if (error.code == 200) {
+                message = @"Por favor, insira seu email.";
+            }
+            
+            if (error.code == 201) {
+                message = @"Por favor, insira sua senha corretamente.";
+            }
+            
+            if (error.code == 202 || error.code == 203) {
+                message = @"Este email já está sendo utilizado.";
+            }
+            
+            alert = [alert initWithTitle:title message:message delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            [alert show];
+        }
+    }];
 }
-*/
+
+#pragma mark - Support Methods
+
+- (BOOL)validEmail
+{
+    NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}";
+    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
+    
+    if(![emailTest evaluateWithObject:self.emailField.text])
+    {
+        return NO;
+    }
+    return YES;
+}
+
+-(void)dismissKeyboard
+{
+    [self.emailField resignFirstResponder];
+    [self.nameField resignFirstResponder];
+    [self.bdayField resignFirstResponder];
+    [self.pwdField resignFirstResponder];
+    [self.rpwdField resignFirstResponder];
+    
+}
 
 @end
