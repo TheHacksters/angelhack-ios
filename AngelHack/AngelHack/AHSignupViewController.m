@@ -7,6 +7,7 @@
 //
 
 #import "AHSignupViewController.h"
+#import "AHUtils.h"
 
 @interface AHSignupViewController ()
 
@@ -15,6 +16,15 @@
 @property (weak, nonatomic) IBOutlet UITextField *bdayField;
 @property (weak, nonatomic) IBOutlet UITextField *pwdField;
 @property (weak, nonatomic) IBOutlet UITextField *rpwdField;
+
+@property (weak, nonatomic) IBOutlet UIView *emailContainerView;
+@property (weak, nonatomic) IBOutlet UIView *nameContainerView;
+@property (weak, nonatomic) IBOutlet UIView *bdayContainerView;
+@property (weak, nonatomic) IBOutlet UIView *pwdContainerView;
+@property (weak, nonatomic) IBOutlet UIView *rpwdContainerView;
+
+@property (weak, nonatomic) IBOutlet UIButton *createButton;
+
 
 @end
 
@@ -35,6 +45,26 @@
 
     UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
     [self.view addGestureRecognizer:gestureRecognizer];
+    
+    //Change Placeholder Font Color
+    self.emailField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Email" attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
+    self.nameField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Name" attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
+    self.bdayField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Birthday" attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
+    self.pwdField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Password" attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
+    self.rpwdField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Retype Password" attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
+    
+    // Setting Textfield Border Color
+    self.emailContainerView.layer.borderColor = [UIColor colorWithRed:0.980392f green:0.980392f blue:0.980392f alpha:1.0f].CGColor;
+    self.nameContainerView.layer.borderColor = [UIColor colorWithRed:0.980392f green:0.980392f blue:0.980392f alpha:0.980392f].CGColor;
+    self.bdayContainerView.layer.borderColor = [UIColor colorWithRed:0.980392f green:0.980392f blue:0.980392f alpha:0.980392f].CGColor;
+    self.pwdContainerView.layer.borderColor = [UIColor colorWithRed:0.980392f green:0.980392f blue:0.980392f alpha:0.980392f].CGColor;
+    self.rpwdContainerView.layer.borderColor = [UIColor colorWithRed:0.980392f green:0.980392f blue:0.980392f alpha:0.980392f].CGColor;
+    
+    // Setting Login Button State Color
+    UIView *greenBackgroundView = [[UIView alloc] initWithFrame:self.createButton.frame];
+    greenBackgroundView.backgroundColor = [UIColor colorWithRed:0.384313725f green:0.6745098f blue:0.3607843f alpha:1.0f];
+    UIImage *greenBackground = [AHUtils imageFromView:greenBackgroundView];
+    [self.createButton setBackgroundImage:greenBackground forState:UIControlStateNormal];
 }
 
 - (void)didReceiveMemoryWarning
@@ -114,7 +144,6 @@
 }
 
 #pragma mark - Support Methods
-
 - (BOOL)validEmail
 {
     NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}";
@@ -138,10 +167,15 @@
 }
 
 #pragma mark - Status Bar Style
-
 - (UIStatusBarStyle)preferredStatusBarStyle
 {
     return UIStatusBarStyleLightContent;
+}
+
+#pragma mark - Dismiss Signup
+- (IBAction)dismissSignup:(id)sender
+{
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 @end
