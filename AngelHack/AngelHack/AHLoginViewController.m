@@ -32,6 +32,8 @@
 
     UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
     [self.view addGestureRecognizer:gestureRecognizer];
+    
+    // Setting 
 }
 
 - (void)didReceiveMemoryWarning
