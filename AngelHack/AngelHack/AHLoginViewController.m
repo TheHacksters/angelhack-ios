@@ -7,11 +7,19 @@
 //
 
 #import "AHLoginViewController.h"
+#import "AHUtils.h"
 
 @interface AHLoginViewController ()
 
 @property (weak, nonatomic) IBOutlet UITextField *usrField;
 @property (weak, nonatomic) IBOutlet UITextField *pwdField;
+
+
+@property (weak, nonatomic) IBOutlet UIView *loginContainerView;
+@property (weak, nonatomic) IBOutlet UIView *passwordContainerView;
+
+@property (weak, nonatomic) IBOutlet UIButton *loginButton;
+@property (weak, nonatomic) IBOutlet UIButton *signupButton;
 
 @end
 
@@ -33,7 +41,23 @@
     UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
     [self.view addGestureRecognizer:gestureRecognizer];
     
-    // Setting 
+    // Setting Textfield Border Color
+    self.loginContainerView.layer.borderColor = [UIColor colorWithRed:0.980392f green:0.980392f blue:0.980392f alpha:1.0f].CGColor;
+    self.passwordContainerView.layer.borderColor = [UIColor colorWithRed:0.980392f green:0.980392f blue:0.980392f alpha:0.980392f].CGColor;
+    
+    // Setting Login Button State Color
+    UIView *greenBackgroundView = [[UIView alloc] initWithFrame:self.loginButton.frame];
+    greenBackgroundView.backgroundColor = [UIColor colorWithRed:0.384313725f green:0.6745098f blue:0.3607843f alpha:1.0f];
+    UIImage *greenBackground = [AHUtils imageFromView:greenBackgroundView];
+    // Setting Signup Button State Color
+    UIView *blueBackgroundView = [[UIView alloc] initWithFrame:self.signupButton.frame];
+    blueBackgroundView.backgroundColor = [UIColor colorWithRed:0.41960784f green:0.5725490f blue:0.666666667f alpha:1.0f];
+    
+    UIImage *blueBackground = [AHUtils imageFromView:blueBackgroundView];
+    
+    [self.loginButton setBackgroundImage:greenBackground forState:UIControlStateNormal];
+    [self.signupButton setBackgroundImage:blueBackground forState:UIControlStateNormal];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -107,6 +131,13 @@
     [self.usrField resignFirstResponder];
     [self.pwdField resignFirstResponder];
     
+}
+
+#pragma mark - Status Bar Style
+
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
 }
 
 @end

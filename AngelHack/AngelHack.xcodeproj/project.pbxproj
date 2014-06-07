@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A1463D91943960800614B7C /* AHUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1463D81943960800614B7C /* AHUtils.m */; };
 		EA8C83F619437261006793C5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8C83F519437261006793C5 /* Foundation.framework */; };
 		EA8C83F819437261006793C5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8C83F719437261006793C5 /* CoreGraphics.framework */; };
 		EA8C83FA19437261006793C5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8C83F919437261006793C5 /* UIKit.framework */; };
@@ -60,6 +61,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A1463D71943960800614B7C /* AHUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHUtils.h; sourceTree = "<group>"; };
+		1A1463D81943960800614B7C /* AHUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHUtils.m; sourceTree = "<group>"; };
 		EA8C83F219437261006793C5 /* AngelHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AngelHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA8C83F519437261006793C5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EA8C83F719437261006793C5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -160,6 +163,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A1463D6194395C900614B7C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				1A1463D71943960800614B7C /* AHUtils.h */,
+				1A1463D81943960800614B7C /* AHUtils.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
 		EA8C83E919437261006793C5 = {
 			isa = PBXGroup;
 			children = (
@@ -203,6 +215,7 @@
 		EA8C83FB19437261006793C5 /* AngelHack */ = {
 			isa = PBXGroup;
 			children = (
+				1A1463D6194395C900614B7C /* Utils */,
 				EA8C842A1943728A006793C5 /* AppDelegate */,
 				EA8C842B19437290006793C5 /* Models */,
 				EA8C842C19437295006793C5 /* Controllers */,
@@ -602,6 +615,7 @@
 				EA9828EC19439DD7004510C5 /* AHBadgeListViewController.m in Sources */,
 				EA8C845919437C25006793C5 /* AHLoginViewController.m in Sources */,
 				EA9828F519439E09004510C5 /* AHSingleCoWorkerViewController.m in Sources */,
+				1A1463D91943960800614B7C /* AHUtils.m in Sources */,
 				EA8C845C19437C2F006793C5 /* AHSignupViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
