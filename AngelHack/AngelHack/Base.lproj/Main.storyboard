@@ -63,11 +63,30 @@
                     <connections>
                         <outlet property="pwdField" destination="fsQ-El-51t" id="hf2-Uw-oW4"/>
                         <outlet property="usrField" destination="5gJ-lu-39O" id="tGo-4O-yMq"/>
+                        <segue destination="dPO-eI-L7m" kind="modal" identifier="successLogin" id="ff3-HH-nVU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-86" y="-268"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="3Md-vK-ohG">
+            <objects>
+                <viewController id="dPO-eI-L7m" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MH2-ty-KNP"/>
+                        <viewControllerLayoutGuide type="bottom" id="EgM-7L-XSm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7mh-sT-ZMm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kQP-LH-SlQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="449" y="33"/>
         </scene>
         <!--Signup View Controller-->
         <scene sceneID="79s-cO-DVI">
@@ -151,6 +170,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <segue destination="dPO-eI-L7m" kind="modal" identifier="successSignup" id="ulF-cm-f4k"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wiO-gQ-pce" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -162,4 +184,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="ulF-cm-f4k"/>
+    </inferredMetricsTieBreakers>
 </document>
