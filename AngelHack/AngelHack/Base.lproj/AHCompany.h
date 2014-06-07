@@ -1,5 +1,5 @@
 //
-//  AHModels.h
+//  AHCompany.h
 //  AngelHack
 //
 //  Created by Joao Victor Chencci Marques on 07/06/14.
@@ -7,9 +7,10 @@
 //
 
 #import <Parse/Parse.h>
+#import "AHModels.h"
 
-#import "AHUser.h"
-#import "AHEvent.h"
-#import "AHCompany.h"
-#import "AHPost.h"
+@interface AHCompany : PFObject <PFSubclassing>
 
++ (NSString *)parseClassName;
+
+@end

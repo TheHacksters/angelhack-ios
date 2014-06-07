@@ -32,6 +32,8 @@
 		EA8C843E1943748C006793C5 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8C843D1943748C006793C5 /* CFNetwork.framework */; };
 		EA8C844019437494006793C5 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8C843F19437494006793C5 /* AudioToolbox.framework */; };
 		EA8C84471943762D006793C5 /* AHUser.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8C84461943762D006793C5 /* AHUser.m */; };
+		EA8C844D19437AFD006793C5 /* AHEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8C844C19437AFD006793C5 /* AHEvent.m */; };
+		EA8C845419437B12006793C5 /* AHPost.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8C845319437B12006793C5 /* AHPost.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,12 @@
 		EA8C844119437576006793C5 /* AHModels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHModels.h; sourceTree = "<group>"; };
 		EA8C84451943762D006793C5 /* AHUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHUser.h; sourceTree = "<group>"; };
 		EA8C84461943762D006793C5 /* AHUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHUser.m; sourceTree = "<group>"; };
+		EA8C844B19437AFD006793C5 /* AHEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHEvent.h; sourceTree = "<group>"; };
+		EA8C844C19437AFD006793C5 /* AHEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHEvent.m; sourceTree = "<group>"; };
+		EA8C844F19437B0A006793C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Base; path = Base.lproj/AHCompany.h; sourceTree = "<group>"; };
+		EA8C845119437B0A006793C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Base; path = Base.lproj/AHCompany.m; sourceTree = "<group>"; };
+		EA8C845219437B12006793C5 /* AHPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHPost.h; sourceTree = "<group>"; };
+		EA8C845319437B12006793C5 /* AHPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHPost.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +217,9 @@
 			children = (
 				EA8C844119437576006793C5 /* AHModels.h */,
 				EA8C844419437592006793C5 /* User */,
+				EA8C844919437AAC006793C5 /* Event */,
+				EA8C844819437AA1006793C5 /* Company */,
+				EA8C844A19437AB3006793C5 /* Post */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -229,6 +240,33 @@
 				EA8C84461943762D006793C5 /* AHUser.m */,
 			);
 			name = User;
+			sourceTree = "<group>";
+		};
+		EA8C844819437AA1006793C5 /* Company */ = {
+			isa = PBXGroup;
+			children = (
+				EA8C844E19437B0A006793C5 /* AHCompany.h */,
+				EA8C845019437B0A006793C5 /* AHCompany.m */,
+			);
+			name = Company;
+			sourceTree = "<group>";
+		};
+		EA8C844919437AAC006793C5 /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				EA8C844B19437AFD006793C5 /* AHEvent.h */,
+				EA8C844C19437AFD006793C5 /* AHEvent.m */,
+			);
+			name = Event;
+			sourceTree = "<group>";
+		};
+		EA8C844A19437AB3006793C5 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				EA8C845219437B12006793C5 /* AHPost.h */,
+				EA8C845319437B12006793C5 /* AHPost.m */,
+			);
+			name = Post;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,8 +368,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA8C840219437261006793C5 /* main.m in Sources */,
+				EA8C844D19437AFD006793C5 /* AHEvent.m in Sources */,
 				EA8C840C19437261006793C5 /* AHViewController.m in Sources */,
 				EA8C840619437261006793C5 /* AHAppDelegate.m in Sources */,
+				EA8C845419437B12006793C5 /* AHPost.m in Sources */,
 				EA8C84471943762D006793C5 /* AHUser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -377,6 +417,22 @@
 				EA8C841E19437261006793C5 /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		EA8C844E19437B0A006793C5 /* AHCompany.h */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA8C844F19437B0A006793C5 /* Base */,
+			);
+			name = AHCompany.h;
+			sourceTree = "<group>";
+		};
+		EA8C845019437B0A006793C5 /* AHCompany.m */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA8C845119437B0A006793C5 /* Base */,
+			);
+			name = AHCompany.m;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
