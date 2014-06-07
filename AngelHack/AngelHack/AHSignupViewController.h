@@ -1,5 +1,5 @@
 //
-//  AHViewController.h
+//  AHSignupViewController.h
 //  AngelHack
 //
 //  Created by Joao Victor Chencci Marques on 07/06/14.
@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AHModels.h"
 
-@interface AHViewController : UIViewController
+@interface AHSignupViewController : UIViewController
 
 @end

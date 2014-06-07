@@ -14,7 +14,6 @@
 		EA8C840219437261006793C5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8C840119437261006793C5 /* main.m */; };
 		EA8C840619437261006793C5 /* AHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8C840519437261006793C5 /* AHAppDelegate.m */; };
 		EA8C840919437261006793C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA8C840719437261006793C5 /* Main.storyboard */; };
-		EA8C840C19437261006793C5 /* AHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8C840B19437261006793C5 /* AHViewController.m */; };
 		EA8C840E19437261006793C5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA8C840D19437261006793C5 /* Images.xcassets */; };
 		EA8C841519437261006793C5 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8C841419437261006793C5 /* XCTest.framework */; };
 		EA8C841619437261006793C5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8C83F519437261006793C5 /* Foundation.framework */; };
@@ -34,6 +33,8 @@
 		EA8C84471943762D006793C5 /* AHUser.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8C84461943762D006793C5 /* AHUser.m */; };
 		EA8C844D19437AFD006793C5 /* AHEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8C844C19437AFD006793C5 /* AHEvent.m */; };
 		EA8C845419437B12006793C5 /* AHPost.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8C845319437B12006793C5 /* AHPost.m */; };
+		EA8C845919437C25006793C5 /* AHLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8C845819437C25006793C5 /* AHLoginViewController.m */; };
+		EA8C845C19437C2F006793C5 /* AHSignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8C845B19437C2F006793C5 /* AHSignupViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,8 +59,6 @@
 		EA8C840419437261006793C5 /* AHAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AHAppDelegate.h; sourceTree = "<group>"; };
 		EA8C840519437261006793C5 /* AHAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AHAppDelegate.m; sourceTree = "<group>"; };
 		EA8C840819437261006793C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		EA8C840A19437261006793C5 /* AHViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AHViewController.h; sourceTree = "<group>"; };
-		EA8C840B19437261006793C5 /* AHViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AHViewController.m; sourceTree = "<group>"; };
 		EA8C840D19437261006793C5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EA8C841319437261006793C5 /* AngelHackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AngelHackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA8C841419437261006793C5 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -85,6 +84,10 @@
 		EA8C845119437B0A006793C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Base; path = Base.lproj/AHCompany.m; sourceTree = "<group>"; };
 		EA8C845219437B12006793C5 /* AHPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHPost.h; sourceTree = "<group>"; };
 		EA8C845319437B12006793C5 /* AHPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHPost.m; sourceTree = "<group>"; };
+		EA8C845719437C25006793C5 /* AHLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHLoginViewController.h; sourceTree = "<group>"; };
+		EA8C845819437C25006793C5 /* AHLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHLoginViewController.m; sourceTree = "<group>"; };
+		EA8C845A19437C2F006793C5 /* AHSignupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHSignupViewController.h; sourceTree = "<group>"; };
+		EA8C845B19437C2F006793C5 /* AHSignupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHSignupViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,8 +230,8 @@
 		EA8C842C19437295006793C5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				EA8C840A19437261006793C5 /* AHViewController.h */,
-				EA8C840B19437261006793C5 /* AHViewController.m */,
+				EA8C845619437C15006793C5 /* Login */,
+				EA8C845519437C10006793C5 /* Signup */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -267,6 +270,24 @@
 				EA8C845319437B12006793C5 /* AHPost.m */,
 			);
 			name = Post;
+			sourceTree = "<group>";
+		};
+		EA8C845519437C10006793C5 /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				EA8C845A19437C2F006793C5 /* AHSignupViewController.h */,
+				EA8C845B19437C2F006793C5 /* AHSignupViewController.m */,
+			);
+			name = Signup;
+			sourceTree = "<group>";
+		};
+		EA8C845619437C15006793C5 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				EA8C845719437C25006793C5 /* AHLoginViewController.h */,
+				EA8C845819437C25006793C5 /* AHLoginViewController.m */,
+			);
+			name = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -369,10 +390,11 @@
 			files = (
 				EA8C840219437261006793C5 /* main.m in Sources */,
 				EA8C844D19437AFD006793C5 /* AHEvent.m in Sources */,
-				EA8C840C19437261006793C5 /* AHViewController.m in Sources */,
 				EA8C840619437261006793C5 /* AHAppDelegate.m in Sources */,
 				EA8C845419437B12006793C5 /* AHPost.m in Sources */,
 				EA8C84471943762D006793C5 /* AHUser.m in Sources */,
+				EA8C845919437C25006793C5 /* AHLoginViewController.m in Sources */,
+				EA8C845C19437C2F006793C5 /* AHSignupViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
