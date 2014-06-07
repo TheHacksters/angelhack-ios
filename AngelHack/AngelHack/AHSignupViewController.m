@@ -10,6 +10,12 @@
 
 @interface AHSignupViewController ()
 
+@property (weak, nonatomic) IBOutlet UITextField *emailField;
+@property (weak, nonatomic) IBOutlet UITextField *nameField;
+@property (weak, nonatomic) IBOutlet UITextField *bdayField;
+@property (weak, nonatomic) IBOutlet UITextField *pwdField;
+@property (weak, nonatomic) IBOutlet UITextField *rpwdField;
+
 @end
 
 @implementation AHSignupViewController
