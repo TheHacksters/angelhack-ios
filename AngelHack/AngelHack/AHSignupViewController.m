@@ -79,10 +79,14 @@
         return;
     }
     
-    AHUser *myUser = [[AHUser alloc] initWithUsername:self.emailField.text andPassword:self.pwdField.text];
+#warning Ajustar a data
+    AHUser *myUser = [[AHUser alloc] initWithUsername:self.emailField.text andPassword:self.pwdField.text andName: self.nameField.text andBirthday: @"a"];
+    
+    
     [myUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
             NSLog(@"SUCCESS: %d", succeeded);
+            
             [self performSegueWithIdentifier:@"successSignup" sender:self];
         } else {
             NSLog(@"ERROR: %@", error);

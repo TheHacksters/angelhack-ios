@@ -11,6 +11,6 @@
 
 @interface AHUser : PFUser
 
-- (AHUser *)initWithUsername:(NSString *)username andPassword:(NSString *)password;
+- (AHUser *)initWithUsername:(NSString *)username andPassword:(NSString *)password andName: (NSString *)name andBirthday: (NSString *)birthday;
 
 @end
