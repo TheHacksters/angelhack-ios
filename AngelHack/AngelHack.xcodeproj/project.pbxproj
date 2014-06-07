@@ -1,0 +1,562 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EA8C83F619437261006793C5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8C83F519437261006793C5 /* Foundation.framework */; };
+		EA8C83F819437261006793C5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8C83F719437261006793C5 /* CoreGraphics.framework */; };
+		EA8C83FA19437261006793C5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8C83F919437261006793C5 /* UIKit.framework */; };
+		EA8C840019437261006793C5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA8C83FE19437261006793C5 /* InfoPlist.strings */; };
+		EA8C840219437261006793C5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8C840119437261006793C5 /* main.m */; };
+		EA8C840619437261006793C5 /* AHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8C840519437261006793C5 /* AHAppDelegate.m */; };
+		EA8C840919437261006793C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA8C840719437261006793C5 /* Main.storyboard */; };
+		EA8C840C19437261006793C5 /* AHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8C840B19437261006793C5 /* AHViewController.m */; };
+		EA8C840E19437261006793C5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA8C840D19437261006793C5 /* Images.xcassets */; };
+		EA8C841519437261006793C5 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8C841419437261006793C5 /* XCTest.framework */; };
+		EA8C841619437261006793C5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8C83F519437261006793C5 /* Foundation.framework */; };
+		EA8C841719437261006793C5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8C83F919437261006793C5 /* UIKit.framework */; };
+		EA8C841F19437261006793C5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA8C841D19437261006793C5 /* InfoPlist.strings */; };
+		EA8C842119437261006793C5 /* AngelHackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8C842019437261006793C5 /* AngelHackTests.m */; };
+		EA8C842E19437438006793C5 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8C842D19437438006793C5 /* Parse.framework */; };
+		EA8C843019437449006793C5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8C842F19437449006793C5 /* SystemConfiguration.framework */; };
+		EA8C843219437450006793C5 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8C843119437450006793C5 /* StoreKit.framework */; };
+		EA8C843419437457006793C5 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8C843319437457006793C5 /* Security.framework */; };
+		EA8C84361943745F006793C5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8C84351943745F006793C5 /* QuartzCore.framework */; };
+		EA8C843819437467006793C5 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8C843719437467006793C5 /* MobileCoreServices.framework */; };
+		EA8C843A19437470006793C5 /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8C843919437470006793C5 /* libz.1.2.5.dylib */; };
+		EA8C843C1943747A006793C5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8C843B1943747A006793C5 /* CoreLocation.framework */; };
+		EA8C843E1943748C006793C5 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8C843D1943748C006793C5 /* CFNetwork.framework */; };
+		EA8C844019437494006793C5 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8C843F19437494006793C5 /* AudioToolbox.framework */; };
+		EA8C84471943762D006793C5 /* AHUser.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8C84461943762D006793C5 /* AHUser.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EA8C841819437261006793C5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA8C83EA19437261006793C5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA8C83F119437261006793C5;
+			remoteInfo = AngelHack;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EA8C83F219437261006793C5 /* AngelHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AngelHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA8C83F519437261006793C5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EA8C83F719437261006793C5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		EA8C83F919437261006793C5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		EA8C83FD19437261006793C5 /* AngelHack-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AngelHack-Info.plist"; sourceTree = "<group>"; };
+		EA8C83FF19437261006793C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EA8C840119437261006793C5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EA8C840319437261006793C5 /* AngelHack-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AngelHack-Prefix.pch"; sourceTree = "<group>"; };
+		EA8C840419437261006793C5 /* AHAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AHAppDelegate.h; sourceTree = "<group>"; };
+		EA8C840519437261006793C5 /* AHAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AHAppDelegate.m; sourceTree = "<group>"; };
+		EA8C840819437261006793C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EA8C840A19437261006793C5 /* AHViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AHViewController.h; sourceTree = "<group>"; };
+		EA8C840B19437261006793C5 /* AHViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AHViewController.m; sourceTree = "<group>"; };
+		EA8C840D19437261006793C5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EA8C841319437261006793C5 /* AngelHackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AngelHackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA8C841419437261006793C5 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		EA8C841C19437261006793C5 /* AngelHackTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AngelHackTests-Info.plist"; sourceTree = "<group>"; };
+		EA8C841E19437261006793C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EA8C842019437261006793C5 /* AngelHackTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AngelHackTests.m; sourceTree = "<group>"; };
+		EA8C842D19437438006793C5 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		EA8C842F19437449006793C5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		EA8C843119437450006793C5 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		EA8C843319437457006793C5 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		EA8C84351943745F006793C5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		EA8C843719437467006793C5 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		EA8C843919437470006793C5 /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
+		EA8C843B1943747A006793C5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		EA8C843D1943748C006793C5 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		EA8C843F19437494006793C5 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		EA8C844119437576006793C5 /* AHModels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHModels.h; sourceTree = "<group>"; };
+		EA8C84451943762D006793C5 /* AHUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHUser.h; sourceTree = "<group>"; };
+		EA8C84461943762D006793C5 /* AHUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHUser.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EA8C83EF19437261006793C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA8C83FA19437261006793C5 /* UIKit.framework in Frameworks */,
+				EA8C844019437494006793C5 /* AudioToolbox.framework in Frameworks */,
+				EA8C843E1943748C006793C5 /* CFNetwork.framework in Frameworks */,
+				EA8C83F819437261006793C5 /* CoreGraphics.framework in Frameworks */,
+				EA8C843C1943747A006793C5 /* CoreLocation.framework in Frameworks */,
+				EA8C843A19437470006793C5 /* libz.1.2.5.dylib in Frameworks */,
+				EA8C843819437467006793C5 /* MobileCoreServices.framework in Frameworks */,
+				EA8C84361943745F006793C5 /* QuartzCore.framework in Frameworks */,
+				EA8C843419437457006793C5 /* Security.framework in Frameworks */,
+				EA8C843219437450006793C5 /* StoreKit.framework in Frameworks */,
+				EA8C843019437449006793C5 /* SystemConfiguration.framework in Frameworks */,
+				EA8C842E19437438006793C5 /* Parse.framework in Frameworks */,
+				EA8C83F619437261006793C5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA8C841019437261006793C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA8C841519437261006793C5 /* XCTest.framework in Frameworks */,
+				EA8C841719437261006793C5 /* UIKit.framework in Frameworks */,
+				EA8C841619437261006793C5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EA8C83E919437261006793C5 = {
+			isa = PBXGroup;
+			children = (
+				EA8C83FB19437261006793C5 /* AngelHack */,
+				EA8C841A19437261006793C5 /* AngelHackTests */,
+				EA8C83F419437261006793C5 /* Frameworks */,
+				EA8C83F319437261006793C5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EA8C83F319437261006793C5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA8C83F219437261006793C5 /* AngelHack.app */,
+				EA8C841319437261006793C5 /* AngelHackTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EA8C83F419437261006793C5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EA8C843F19437494006793C5 /* AudioToolbox.framework */,
+				EA8C843D1943748C006793C5 /* CFNetwork.framework */,
+				EA8C843B1943747A006793C5 /* CoreLocation.framework */,
+				EA8C843919437470006793C5 /* libz.1.2.5.dylib */,
+				EA8C843719437467006793C5 /* MobileCoreServices.framework */,
+				EA8C84351943745F006793C5 /* QuartzCore.framework */,
+				EA8C843319437457006793C5 /* Security.framework */,
+				EA8C843119437450006793C5 /* StoreKit.framework */,
+				EA8C842F19437449006793C5 /* SystemConfiguration.framework */,
+				EA8C842D19437438006793C5 /* Parse.framework */,
+				EA8C83F519437261006793C5 /* Foundation.framework */,
+				EA8C83F719437261006793C5 /* CoreGraphics.framework */,
+				EA8C83F919437261006793C5 /* UIKit.framework */,
+				EA8C841419437261006793C5 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EA8C83FB19437261006793C5 /* AngelHack */ = {
+			isa = PBXGroup;
+			children = (
+				EA8C842A1943728A006793C5 /* AppDelegate */,
+				EA8C842B19437290006793C5 /* Models */,
+				EA8C842C19437295006793C5 /* Controllers */,
+				EA8C840719437261006793C5 /* Main.storyboard */,
+				EA8C840D19437261006793C5 /* Images.xcassets */,
+				EA8C83FC19437261006793C5 /* Supporting Files */,
+			);
+			path = AngelHack;
+			sourceTree = "<group>";
+		};
+		EA8C83FC19437261006793C5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EA8C83FD19437261006793C5 /* AngelHack-Info.plist */,
+				EA8C83FE19437261006793C5 /* InfoPlist.strings */,
+				EA8C840119437261006793C5 /* main.m */,
+				EA8C840319437261006793C5 /* AngelHack-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EA8C841A19437261006793C5 /* AngelHackTests */ = {
+			isa = PBXGroup;
+			children = (
+				EA8C842019437261006793C5 /* AngelHackTests.m */,
+				EA8C841B19437261006793C5 /* Supporting Files */,
+			);
+			path = AngelHackTests;
+			sourceTree = "<group>";
+		};
+		EA8C841B19437261006793C5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EA8C841C19437261006793C5 /* AngelHackTests-Info.plist */,
+				EA8C841D19437261006793C5 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EA8C842A1943728A006793C5 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				EA8C840419437261006793C5 /* AHAppDelegate.h */,
+				EA8C840519437261006793C5 /* AHAppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		EA8C842B19437290006793C5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EA8C844119437576006793C5 /* AHModels.h */,
+				EA8C844419437592006793C5 /* User */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		EA8C842C19437295006793C5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EA8C840A19437261006793C5 /* AHViewController.h */,
+				EA8C840B19437261006793C5 /* AHViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		EA8C844419437592006793C5 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				EA8C84451943762D006793C5 /* AHUser.h */,
+				EA8C84461943762D006793C5 /* AHUser.m */,
+			);
+			name = User;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EA8C83F119437261006793C5 /* AngelHack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA8C842419437261006793C5 /* Build configuration list for PBXNativeTarget "AngelHack" */;
+			buildPhases = (
+				EA8C83EE19437261006793C5 /* Sources */,
+				EA8C83EF19437261006793C5 /* Frameworks */,
+				EA8C83F019437261006793C5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AngelHack;
+			productName = AngelHack;
+			productReference = EA8C83F219437261006793C5 /* AngelHack.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EA8C841219437261006793C5 /* AngelHackTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA8C842719437261006793C5 /* Build configuration list for PBXNativeTarget "AngelHackTests" */;
+			buildPhases = (
+				EA8C840F19437261006793C5 /* Sources */,
+				EA8C841019437261006793C5 /* Frameworks */,
+				EA8C841119437261006793C5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA8C841919437261006793C5 /* PBXTargetDependency */,
+			);
+			name = AngelHackTests;
+			productName = AngelHackTests;
+			productReference = EA8C841319437261006793C5 /* AngelHackTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EA8C83EA19437261006793C5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = AH;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = devnup;
+				TargetAttributes = {
+					EA8C841219437261006793C5 = {
+						TestTargetID = EA8C83F119437261006793C5;
+					};
+				};
+			};
+			buildConfigurationList = EA8C83ED19437261006793C5 /* Build configuration list for PBXProject "AngelHack" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EA8C83E919437261006793C5;
+			productRefGroup = EA8C83F319437261006793C5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EA8C83F119437261006793C5 /* AngelHack */,
+				EA8C841219437261006793C5 /* AngelHackTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EA8C83F019437261006793C5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA8C840E19437261006793C5 /* Images.xcassets in Resources */,
+				EA8C840019437261006793C5 /* InfoPlist.strings in Resources */,
+				EA8C840919437261006793C5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA8C841119437261006793C5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA8C841F19437261006793C5 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EA8C83EE19437261006793C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA8C840219437261006793C5 /* main.m in Sources */,
+				EA8C840C19437261006793C5 /* AHViewController.m in Sources */,
+				EA8C840619437261006793C5 /* AHAppDelegate.m in Sources */,
+				EA8C84471943762D006793C5 /* AHUser.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA8C840F19437261006793C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA8C842119437261006793C5 /* AngelHackTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EA8C841919437261006793C5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA8C83F119437261006793C5 /* AngelHack */;
+			targetProxy = EA8C841819437261006793C5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EA8C83FE19437261006793C5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA8C83FF19437261006793C5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		EA8C840719437261006793C5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA8C840819437261006793C5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EA8C841D19437261006793C5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA8C841E19437261006793C5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EA8C842219437261006793C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EA8C842319437261006793C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EA8C842519437261006793C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AngelHack/AngelHack-Prefix.pch";
+				INFOPLIST_FILE = "AngelHack/AngelHack-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		EA8C842619437261006793C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AngelHack/AngelHack-Prefix.pch";
+				INFOPLIST_FILE = "AngelHack/AngelHack-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		EA8C842819437261006793C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AngelHack.app/AngelHack";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AngelHack/AngelHack-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "AngelHackTests/AngelHackTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		EA8C842919437261006793C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AngelHack.app/AngelHack";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AngelHack/AngelHack-Prefix.pch";
+				INFOPLIST_FILE = "AngelHackTests/AngelHackTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EA8C83ED19437261006793C5 /* Build configuration list for PBXProject "AngelHack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA8C842219437261006793C5 /* Debug */,
+				EA8C842319437261006793C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA8C842419437261006793C5 /* Build configuration list for PBXNativeTarget "AngelHack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA8C842519437261006793C5 /* Debug */,
+				EA8C842619437261006793C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA8C842719437261006793C5 /* Build configuration list for PBXNativeTarget "AngelHackTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA8C842819437261006793C5 /* Debug */,
+				EA8C842919437261006793C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EA8C83EA19437261006793C5 /* Project object */;
+}
