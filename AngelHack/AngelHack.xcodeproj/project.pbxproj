@@ -48,6 +48,7 @@
 		EA9828FB19439E78004510C5 /* AHMyEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9828FA19439E78004510C5 /* AHMyEventsViewController.m */; };
 		EA9828FE19439F26004510C5 /* AHSingleEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9828FD19439F26004510C5 /* AHSingleEventViewController.m */; };
 		EA98290119439F2F004510C5 /* AHCreateEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA98290019439F2F004510C5 /* AHCreateEventViewController.m */; };
+		EA9829041943C3BC004510C5 /* AHCreateEmailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9829031943C3BC004510C5 /* AHCreateEmailTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +128,8 @@
 		EA9828FD19439F26004510C5 /* AHSingleEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHSingleEventViewController.m; sourceTree = "<group>"; };
 		EA9828FF19439F2F004510C5 /* AHCreateEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHCreateEventViewController.h; sourceTree = "<group>"; };
 		EA98290019439F2F004510C5 /* AHCreateEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHCreateEventViewController.m; sourceTree = "<group>"; };
+		EA9829021943C3BC004510C5 /* AHCreateEmailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHCreateEmailTableViewCell.h; sourceTree = "<group>"; };
+		EA9829031943C3BC004510C5 /* AHCreateEmailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHCreateEmailTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -374,6 +377,8 @@
 			children = (
 				EA9828E019439D55004510C5 /* AHCreateCompanyViewController.h */,
 				EA9828E119439D55004510C5 /* AHCreateCompanyViewController.m */,
+				EA9829021943C3BC004510C5 /* AHCreateEmailTableViewCell.h */,
+				EA9829031943C3BC004510C5 /* AHCreateEmailTableViewCell.m */,
 			);
 			name = CreateCompany;
 			sourceTree = "<group>";
@@ -607,6 +612,7 @@
 				EA8C840619437261006793C5 /* AHAppDelegate.m in Sources */,
 				EA98290119439F2F004510C5 /* AHCreateEventViewController.m in Sources */,
 				EA9828E919439D86004510C5 /* AHInviteMemberViewController.m in Sources */,
+				EA9829041943C3BC004510C5 /* AHCreateEmailTableViewCell.m in Sources */,
 				EA8C845419437B12006793C5 /* AHPost.m in Sources */,
 				EA9828F219439DF5004510C5 /* AHCoWorkersListViewController.m in Sources */,
 				EA9828E519439D67004510C5 /* AHProfileViewController.m in Sources */,
