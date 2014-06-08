@@ -86,7 +86,7 @@
     return 60;
 }
 
-- (double)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
     // This will create a "invisible" footer
     return 0.01f;
 }
@@ -166,7 +166,13 @@
 #pragma mark - Create Company Manager
 - (IBAction)createCompany:(id)sender
 {
-    AHCompany *newCompany = [[AHCompany alloc] initWithName:self.companyField.text andAdmin:[AHUser currentUser]];
+    AHCompany *myCompany = [[AHCompany alloc] initWithName:self.companyField.text andAdmin:[AHUser currentUser]];
+    [myCompany save];
+    
+    [myCompany addMember:[AHUser currentUser]];
+    [myCompany batchInvite:self.emails];
+    
+    [self.emails removeAllObjects];
 }
 
 @end

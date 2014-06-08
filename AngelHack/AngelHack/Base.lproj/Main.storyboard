@@ -1217,8 +1217,8 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="ulF-cm-f4k"/>
-        <segue reference="Zaw-dN-qex"/>
         <segue reference="zxc-RL-Zuh"/>
+        <segue reference="ff3-HH-nVU"/>
+        <segue reference="Zaw-dN-qex"/>
     </inferredMetricsTieBreakers>
 </document>

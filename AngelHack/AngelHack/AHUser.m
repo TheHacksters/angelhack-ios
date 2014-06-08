@@ -30,20 +30,7 @@
 #pragma mark - Relational Methods
 - (void)addCompany:(AHCompany *)company
 {
-    NSArray *companies = self[@"companies"];
-    if (!companies) {
-        self[@"companies"] = @[company];
-    } else {
-        [self addObject:company forKey:@"companies"];
-    }
-    
-//    [self saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-//        if (!succeeded) {
-//            NSLog(@"ERROR");
-//        } else {
-//            NSLog(@"OK");
-//        }
-//    }];
+    [company addMember:self];
 }
 
 - (NSArray *)getCompanies

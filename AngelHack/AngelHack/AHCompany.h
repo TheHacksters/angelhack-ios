@@ -26,4 +26,7 @@
 
 - (NSInteger)memberCount;
 
+- (void)addMember:(AHUser *)user;
+- (void)batchInvite:(NSArray *)emailList;
+
 @end
