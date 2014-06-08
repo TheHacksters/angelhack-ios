@@ -8,6 +8,10 @@
 
 #import <Parse/Parse.h>
 
+@class AHEvent;
+@class AHUser;
+@class AHCompany;
+
 typedef NS_ENUM(NSInteger, AHEventType) {
     AHEventTypeHappyHour = 0,
     AHEventTypeSports,

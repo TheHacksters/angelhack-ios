@@ -14,6 +14,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *emailField;
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
 @property (weak, nonatomic) IBOutlet UITextField *bdayField;
+@property (weak, nonatomic) IBOutlet UITextField *bmonthField;
+@property (weak, nonatomic) IBOutlet UITextField *byearField;
 @property (weak, nonatomic) IBOutlet UITextField *pwdField;
 @property (weak, nonatomic) IBOutlet UITextField *rpwdField;
 
@@ -94,8 +96,19 @@
         return;
     }
     
-#warning Testar a data
-    AHUser *myUser = [[AHUser alloc] initWithUsername:self.emailField.text andPassword:self.pwdField.text andName: self.nameField.text andBirthday: [NSDate date]];
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *components = [[NSDateComponents alloc] init];
+    
+    NSLog(@"%d / %d / %d", [self.bdayField.text integerValue],[self.bmonthField.text integerValue],[self.byearField.text integerValue]);
+    
+    [components setDay:[self.bdayField.text integerValue]];
+    [components setMonth:[self.bmonthField.text integerValue]];
+    [components setYear:[self.byearField.text integerValue]];
+    NSDate *date = [calendar dateFromComponents:components];
+    
+    NSLog(@"DATE %@", date);
+    
+    AHUser *myUser = [[AHUser alloc] initWithUsername:self.emailField.text andPassword:self.pwdField.text andName: self.nameField.text andBirthday: date];
     
     
     [myUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
@@ -149,6 +162,8 @@
     [self.emailField resignFirstResponder];
     [self.nameField resignFirstResponder];
     [self.bdayField resignFirstResponder];
+    [self.bmonthField resignFirstResponder];
+    [self.byearField resignFirstResponder];
     [self.pwdField resignFirstResponder];
     [self.rpwdField resignFirstResponder];
     
