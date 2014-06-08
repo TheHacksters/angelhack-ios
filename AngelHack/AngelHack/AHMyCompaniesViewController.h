@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AHModels.h"
 
 @interface AHMyCompaniesViewController : UIViewController
 

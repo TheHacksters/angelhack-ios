@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1A1463D91943960800614B7C /* AHUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1463D81943960800614B7C /* AHUtils.m */; };
+		1A1463E51943E1FB00614B7C /* AHCompanyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1463E41943E1FB00614B7C /* AHCompanyTableViewCell.m */; };
 		EA8C83F619437261006793C5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8C83F519437261006793C5 /* Foundation.framework */; };
 		EA8C83F819437261006793C5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8C83F719437261006793C5 /* CoreGraphics.framework */; };
 		EA8C83FA19437261006793C5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8C83F919437261006793C5 /* UIKit.framework */; };
@@ -63,6 +64,8 @@
 /* Begin PBXFileReference section */
 		1A1463D71943960800614B7C /* AHUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHUtils.h; sourceTree = "<group>"; };
 		1A1463D81943960800614B7C /* AHUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHUtils.m; sourceTree = "<group>"; };
+		1A1463E31943E1FB00614B7C /* AHCompanyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHCompanyTableViewCell.h; sourceTree = "<group>"; };
+		1A1463E41943E1FB00614B7C /* AHCompanyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHCompanyTableViewCell.m; sourceTree = "<group>"; };
 		EA8C83F219437261006793C5 /* AngelHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AngelHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA8C83F519437261006793C5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EA8C83F719437261006793C5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -170,6 +173,15 @@
 				1A1463D81943960800614B7C /* AHUtils.m */,
 			);
 			name = Utils;
+			sourceTree = "<group>";
+		};
+		1A1463DD1943BA9400614B7C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				1A1463E31943E1FB00614B7C /* AHCompanyTableViewCell.h */,
+				1A1463E41943E1FB00614B7C /* AHCompanyTableViewCell.m */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 		EA8C83E919437261006793C5 = {
@@ -363,6 +375,7 @@
 		EA9828C319439B56004510C5 /* MyCompanies */ = {
 			isa = PBXGroup;
 			children = (
+				1A1463DD1943BA9400614B7C /* Cells */,
 				EA9828DC19439D2D004510C5 /* AHMyCompaniesViewController.h */,
 				EA9828DD19439D2D004510C5 /* AHMyCompaniesViewController.m */,
 			);
@@ -613,6 +626,7 @@
 				EA8C84471943762D006793C5 /* AHUser.m in Sources */,
 				EA9828DE19439D2D004510C5 /* AHMyCompaniesViewController.m in Sources */,
 				EA9828EC19439DD7004510C5 /* AHBadgeListViewController.m in Sources */,
+				1A1463E51943E1FB00614B7C /* AHCompanyTableViewCell.m in Sources */,
 				EA8C845919437C25006793C5 /* AHLoginViewController.m in Sources */,
 				EA9828F519439E09004510C5 /* AHSingleCoWorkerViewController.m in Sources */,
 				1A1463D91943960800614B7C /* AHUtils.m in Sources */,

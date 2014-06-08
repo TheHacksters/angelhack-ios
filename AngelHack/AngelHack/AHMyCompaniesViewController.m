@@ -7,8 +7,14 @@
 //
 
 #import "AHMyCompaniesViewController.h"
+#import "AHCompanyTableViewCell.h"
 
-@interface AHMyCompaniesViewController ()
+@interface AHMyCompaniesViewController () <UITableViewDataSource, UITableViewDelegate>
+
+@property (strong, nonatomic) AHUser *user;
+@property (strong, nonatomic) NSArray *companies;
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -26,7 +32,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    // Setting Up Table View
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    
+    // Parse Objects
+    self.user = (AHUser *)[PFUser currentUser];
+    self.companies = @[@"NOME DA CIA", @"BITPAY", @"AMAZON"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,5 +58,50 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma mark - UITableView DataSource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [self.companies count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *companyCellIdentifier = @"AHCompanyTableViewCell";
+    
+    
+    AHCompanyTableViewCell *cell;
+    
+    NSString *company = [self.companies objectAtIndex:indexPath.row];
+    
+    cell = (AHCompanyTableViewCell *)[tableView dequeueReusableCellWithIdentifier:companyCellIdentifier forIndexPath:indexPath];
+    
+    if (!cell) {
+        NSLog(@"NIL CELL");
+    }
+    
+    cell.name.text = company;
+    
+    return cell;
+}
+
+#pragma mark - UITableView Delegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"INDEX PATH: %d", indexPath.row);
+}
+
+- (IBAction)logout:(id)sender {
+    [PFUser logOut];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - UITableView Delegate
+
+
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
 
 @end
