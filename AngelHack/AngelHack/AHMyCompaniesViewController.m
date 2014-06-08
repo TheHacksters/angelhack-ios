@@ -105,7 +105,10 @@
     }
     
     if (self.companiesFetched) {
+        NSArray *members = (NSArray *)company[@"members"];
+        
         cell.name.text = [company getName];
+        cell.numberOfUsers.text = [NSString stringWithFormat:@"%d", members.count];
     }
     
     return cell;
