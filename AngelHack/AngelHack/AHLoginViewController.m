@@ -122,6 +122,9 @@
             AHUser *myUser = (AHUser *)user;
             NSLog(@"DATA %@", myUser);
             
+            [[PFInstallation currentInstallation] setObject:[PFUser currentUser] forKey:@"user"];
+            [[PFInstallation currentInstallation] saveEventually];
+            
             [self performSegueWithIdentifier:@"successLogin" sender:self];
         }
     }];

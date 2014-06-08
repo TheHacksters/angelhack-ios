@@ -126,6 +126,28 @@
 {
     self.user.selectedCompany = [self.companies objectAtIndex:indexPath.row];
     [self performSegueWithIdentifier:@"pushCompanyEventsSegue" sender:self];
+
+}
+
+- (IBAction)logout:(id)sender {
+    
+    NSDictionary *data = [NSDictionary dictionaryWithObjectsAndKeys:
+                          @"some text..", @"alert", nil];
+    
+    PFQuery *userQuery = [PFQuery queryWithClassName:@"_User"];
+    [userQuery whereKey:@"objectId" equalTo:@"zsXiJL04uK"];
+    
+    AHUser *targetUser = [[userQuery findObjects] objectAtIndex:0];
+    
+    // Create our installation query
+    PFQuery *pushQuery = [PFInstallation query];
+    [pushQuery whereKey:@"user" equalTo:targetUser];
+    
+    // Send push notification to query
+    PFPush *push = [[PFPush alloc] init];
+    [push setQuery:pushQuery]; // Set our installation query
+    [push setData:data];
+    [push sendPushInBackground];
 }
 
 #pragma mark - UITableView Delegate

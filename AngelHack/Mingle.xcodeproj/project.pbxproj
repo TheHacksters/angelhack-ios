@@ -68,21 +68,21 @@
 		1A1463D81943960800614B7C /* AHUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHUtils.m; sourceTree = "<group>"; };
 		1A1463E31943E1FB00614B7C /* AHCompanyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHCompanyTableViewCell.h; sourceTree = "<group>"; };
 		1A1463E41943E1FB00614B7C /* AHCompanyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHCompanyTableViewCell.m; sourceTree = "<group>"; };
-		EA8C83F219437261006793C5 /* AngelHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AngelHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA8C83F219437261006793C5 /* Mingle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mingle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA8C83F519437261006793C5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EA8C83F719437261006793C5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		EA8C83F919437261006793C5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		EA8C83FD19437261006793C5 /* AngelHack-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AngelHack-Info.plist"; sourceTree = "<group>"; };
+		EA8C83FD19437261006793C5 /* Mingle-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Mingle-Info.plist"; sourceTree = "<group>"; };
 		EA8C83FF19437261006793C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EA8C840119437261006793C5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		EA8C840319437261006793C5 /* AngelHack-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AngelHack-Prefix.pch"; sourceTree = "<group>"; };
+		EA8C840319437261006793C5 /* Mingle-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mingle-Prefix.pch"; sourceTree = "<group>"; };
 		EA8C840419437261006793C5 /* AHAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AHAppDelegate.h; sourceTree = "<group>"; };
 		EA8C840519437261006793C5 /* AHAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AHAppDelegate.m; sourceTree = "<group>"; };
 		EA8C840819437261006793C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EA8C840D19437261006793C5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		EA8C841319437261006793C5 /* AngelHackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AngelHackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA8C841319437261006793C5 /* MingleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MingleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA8C841419437261006793C5 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		EA8C841C19437261006793C5 /* AngelHackTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AngelHackTests-Info.plist"; sourceTree = "<group>"; };
+		EA8C841C19437261006793C5 /* MingleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MingleTests-Info.plist"; sourceTree = "<group>"; };
 		EA8C841E19437261006793C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EA8C842019437261006793C5 /* AngelHackTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AngelHackTests.m; sourceTree = "<group>"; };
 		EA8C842D19437438006793C5 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
@@ -201,8 +201,8 @@
 		EA8C83F319437261006793C5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EA8C83F219437261006793C5 /* AngelHack.app */,
-				EA8C841319437261006793C5 /* AngelHackTests.xctest */,
+				EA8C83F219437261006793C5 /* Mingle.app */,
+				EA8C841319437261006793C5 /* MingleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -245,10 +245,10 @@
 		EA8C83FC19437261006793C5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				EA8C83FD19437261006793C5 /* AngelHack-Info.plist */,
+				EA8C83FD19437261006793C5 /* Mingle-Info.plist */,
 				EA8C83FE19437261006793C5 /* InfoPlist.strings */,
 				EA8C840119437261006793C5 /* main.m */,
-				EA8C840319437261006793C5 /* AngelHack-Prefix.pch */,
+				EA8C840319437261006793C5 /* Mingle-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -265,7 +265,7 @@
 		EA8C841B19437261006793C5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				EA8C841C19437261006793C5 /* AngelHackTests-Info.plist */,
+				EA8C841C19437261006793C5 /* MingleTests-Info.plist */,
 				EA8C841D19437261006793C5 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -521,9 +521,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EA8C83F119437261006793C5 /* AngelHack */ = {
+		EA8C83F119437261006793C5 /* Mingle */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EA8C842419437261006793C5 /* Build configuration list for PBXNativeTarget "AngelHack" */;
+			buildConfigurationList = EA8C842419437261006793C5 /* Build configuration list for PBXNativeTarget "Mingle" */;
 			buildPhases = (
 				EA8C83EE19437261006793C5 /* Sources */,
 				EA8C83EF19437261006793C5 /* Frameworks */,
@@ -533,14 +533,14 @@
 			);
 			dependencies = (
 			);
-			name = AngelHack;
+			name = Mingle;
 			productName = AngelHack;
-			productReference = EA8C83F219437261006793C5 /* AngelHack.app */;
+			productReference = EA8C83F219437261006793C5 /* Mingle.app */;
 			productType = "com.apple.product-type.application";
 		};
-		EA8C841219437261006793C5 /* AngelHackTests */ = {
+		EA8C841219437261006793C5 /* MingleTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EA8C842719437261006793C5 /* Build configuration list for PBXNativeTarget "AngelHackTests" */;
+			buildConfigurationList = EA8C842719437261006793C5 /* Build configuration list for PBXNativeTarget "MingleTests" */;
 			buildPhases = (
 				EA8C840F19437261006793C5 /* Sources */,
 				EA8C841019437261006793C5 /* Frameworks */,
@@ -551,9 +551,9 @@
 			dependencies = (
 				EA8C841919437261006793C5 /* PBXTargetDependency */,
 			);
-			name = AngelHackTests;
+			name = MingleTests;
 			productName = AngelHackTests;
-			productReference = EA8C841319437261006793C5 /* AngelHackTests.xctest */;
+			productReference = EA8C841319437261006793C5 /* MingleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -566,12 +566,19 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = devnup;
 				TargetAttributes = {
+					EA8C83F119437261006793C5 = {
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
 					EA8C841219437261006793C5 = {
 						TestTargetID = EA8C83F119437261006793C5;
 					};
 				};
 			};
-			buildConfigurationList = EA8C83ED19437261006793C5 /* Build configuration list for PBXProject "AngelHack" */;
+			buildConfigurationList = EA8C83ED19437261006793C5 /* Build configuration list for PBXProject "Mingle" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -584,8 +591,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EA8C83F119437261006793C5 /* AngelHack */,
-				EA8C841219437261006793C5 /* AngelHackTests */,
+				EA8C83F119437261006793C5 /* Mingle */,
+				EA8C841219437261006793C5 /* MingleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -655,7 +662,7 @@
 /* Begin PBXTargetDependency section */
 		EA8C841919437261006793C5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = EA8C83F119437261006793C5 /* AngelHack */;
+			target = EA8C83F119437261006793C5 /* Mingle */;
 			targetProxy = EA8C841819437261006793C5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -722,6 +729,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "98942FEC-F898-4047-B333-A3098F042818";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -753,6 +761,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PROVISIONING_PROFILE = "98942FEC-F898-4047-B333-A3098F042818";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -768,10 +777,11 @@
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AngelHack/AngelHack-Prefix.pch";
-				INFOPLIST_FILE = "AngelHack/AngelHack-Info.plist";
+				GCC_PREFIX_HEADER = "AngelHack/Mingle-Prefix.pch";
+				INFOPLIST_FILE = "AngelHack/Mingle-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Mingle;
+				PROVISIONING_PROFILE = "98942FEC-F898-4047-B333-A3098F042818";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -786,10 +796,11 @@
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AngelHack/AngelHack-Prefix.pch";
-				INFOPLIST_FILE = "AngelHack/AngelHack-Info.plist";
+				GCC_PREFIX_HEADER = "AngelHack/Mingle-Prefix.pch";
+				INFOPLIST_FILE = "AngelHack/Mingle-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Mingle;
+				PROVISIONING_PROFILE = "98942FEC-F898-4047-B333-A3098F042818";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -809,8 +820,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "AngelHackTests/AngelHackTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "AngelHackTests/MingleTests-Info.plist";
+				PRODUCT_NAME = MingleTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -827,8 +838,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AngelHack/AngelHack-Prefix.pch";
-				INFOPLIST_FILE = "AngelHackTests/AngelHackTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "AngelHackTests/MingleTests-Info.plist";
+				PRODUCT_NAME = MingleTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -837,7 +848,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EA8C83ED19437261006793C5 /* Build configuration list for PBXProject "AngelHack" */ = {
+		EA8C83ED19437261006793C5 /* Build configuration list for PBXProject "Mingle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA8C842219437261006793C5 /* Debug */,
@@ -846,7 +857,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EA8C842419437261006793C5 /* Build configuration list for PBXNativeTarget "AngelHack" */ = {
+		EA8C842419437261006793C5 /* Build configuration list for PBXNativeTarget "Mingle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA8C842519437261006793C5 /* Debug */,
@@ -855,7 +866,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EA8C842719437261006793C5 /* Build configuration list for PBXNativeTarget "AngelHackTests" */ = {
+		EA8C842719437261006793C5 /* Build configuration list for PBXNativeTarget "MingleTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA8C842819437261006793C5 /* Debug */,

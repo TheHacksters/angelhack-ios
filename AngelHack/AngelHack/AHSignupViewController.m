@@ -116,6 +116,9 @@
         if (succeeded) {
             NSLog(@"SUCCESS: %d", succeeded);
             
+            [[PFInstallation currentInstallation] setObject:[PFUser currentUser] forKey:@"user"];
+            [[PFInstallation currentInstallation] saveEventually];
+            
             [self performSegueWithIdentifier:@"successSignup" sender:self];
         } else {
             NSLog(@"ERROR: %@", error);

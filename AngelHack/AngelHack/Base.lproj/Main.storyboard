@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="SR9-YX-BFz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="14A238x" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="SR9-YX-BFz">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -312,7 +312,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gIe-s8-fL9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-7168" y="-2514"/>
+            <point key="canvasLocation" x="-7144" y="-2514"/>
         </scene>
         <!--Co Workers List View Controller-->
         <scene sceneID="Md8-hx-4fk">
@@ -338,7 +338,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AxT-wC-LbW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-7469" y="-3084"/>
+            <point key="canvasLocation" x="-7569" y="-3084"/>
         </scene>
         <!--Single Co Worker View Controller-->
         <scene sceneID="R93-ib-6dp">
@@ -454,7 +454,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lXa-uT-FUE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5101" y="-1894"/>
+            <point key="canvasLocation" x="-5465" y="-1830"/>
         </scene>
         <!--Single Event View Controller-->
         <scene sceneID="cky-vA-m3L">
@@ -480,33 +480,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H2i-FH-b20" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5725" y="-2188"/>
-        </scene>
-        <!--Invite Member View Controller-->
-        <scene sceneID="8CX-CQ-8tJ">
-            <objects>
-                <viewController id="WJd-3D-XWn" customClass="AHInviteMemberViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="iB4-A7-EXn"/>
-                        <viewControllerLayoutGuide type="bottom" id="fqz-KE-YOu"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="aYO-hk-xqd">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="INVITE MEMBERS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="STC-Wv-Pat">
-                                <rect key="frame" x="89" y="273" width="142" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MLn-od-uQd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-7469" y="-3900"/>
+            <point key="canvasLocation" x="-5847" y="-1830"/>
         </scene>
         <!--My Companies View Controller-->
         <scene sceneID="3Md-vK-ohG">
@@ -627,6 +601,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="logout:" destination="dPO-eI-L7m" eventType="touchUpInside" id="orE-jk-uha"/>
                                     <segue destination="xLQ-NO-vye" kind="push" id="FEV-08-3UF"/>
                                 </connections>
                             </button>
@@ -779,7 +754,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SMi-Wz-9Kw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-6685" y="-1859"/>
+            <point key="canvasLocation" x="-6605" y="-1859"/>
         </scene>
         <!--Badge List View Controller-->
         <scene sceneID="aTM-mv-cL1">
@@ -805,7 +780,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2iA-A1-O4j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-7469" y="-508"/>
+            <point key="canvasLocation" x="-7369" y="-848"/>
         </scene>
         <!--Single Badge View Controller-->
         <scene sceneID="IV2-QY-wMX">
@@ -831,7 +806,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gTX-Mt-15R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-6777" y="-508"/>
+            <point key="canvasLocation" x="-6777" y="-848"/>
         </scene>
         <!--Create Event View Controller-->
         <scene sceneID="q5C-cq-RsD">
@@ -1353,8 +1328,8 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="zxc-RL-Zuh"/>
-        <segue reference="ff3-HH-nVU"/>
         <segue reference="Zaw-dN-qex"/>
+        <segue reference="ff3-HH-nVU"/>
+        <segue reference="zxc-RL-Zuh"/>
     </inferredMetricsTieBreakers>
 </document>
