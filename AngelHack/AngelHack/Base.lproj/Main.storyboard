@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="14A238x" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="eUR-Ga-VwB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="14A238x" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="NAT-Bq-TXU">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -936,18 +936,56 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                             </imageView>
-                                            <textField appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Date/Time" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="54c-kK-mgq" customClass="AHColoredPlaceholderTextField">
-                                                <rect key="frame" x="45" y="7" width="196" height="30"/>
+                                            <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="/" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="46Q-YI-GvD">
+                                                <rect key="frame" x="141" y="12" width="5" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.98039215800000001" green="0.98039215800000001" blue="0.98039215800000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Month" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zwF-qo-cmv" customClass="AHColoredPlaceholderTextField">
+                                                <rect key="frame" x="45" y="7" width="50" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="textColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="17"/>
-                                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="15"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderStringColor">
-                                                        <color key="value" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="value" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
+                                            <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Year" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Inl-tS-tZQ" customClass="AHColoredPlaceholderTextField">
+                                                <rect key="frame" x="161" y="7" width="56" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="textColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="15"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderStringColor">
+                                                        <color key="value" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Day" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mzg-Ku-NuI" customClass="AHColoredPlaceholderTextField">
+                                                <rect key="frame" x="103" y="7" width="56" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="textColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="15"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderStringColor">
+                                                        <color key="value" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="/" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IBM-l4-fMe">
+                                                <rect key="frame" x="92" y="11" width="5" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.98039215800000001" green="0.98039215800000001" blue="0.98039215800000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
@@ -1055,9 +1093,11 @@
                         <outlet property="coffeeTabBackground" destination="po8-ma-0ON" id="otd-3V-DZ6"/>
                         <outlet property="coffeeTabButton" destination="SWw-ve-wsI" id="NMy-rj-d67"/>
                         <outlet property="createNewEventButton" destination="euV-vW-th4" id="XmW-yM-tgQ"/>
-                        <outlet property="eventDateTextField" destination="54c-kK-mgq" id="uqq-uf-g1y"/>
+                        <outlet property="eventDayTextField" destination="mzg-Ku-NuI" id="MyT-Tk-ZII"/>
                         <outlet property="eventLocationTextField" destination="F3k-We-L8w" id="LNL-vJ-g9g"/>
+                        <outlet property="eventMonthTextField" destination="zwF-qo-cmv" id="QFE-cc-aO7"/>
                         <outlet property="eventNameTextField" destination="0fs-wt-iNx" id="UmT-68-65O"/>
+                        <outlet property="eventYearTextField" destination="Inl-tS-tZQ" id="SlF-ye-mt4"/>
                         <outlet property="happyHourTabBackground" destination="ZPh-zm-4c6" id="5c5-Ro-fbU"/>
                         <outlet property="happyHourTabButton" destination="yWn-q5-IGM" id="9aU-JK-tSr"/>
                         <outlet property="mealTabBackground" destination="KpI-Ng-imm" id="huh-JM-chQ"/>
@@ -1071,7 +1111,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3J5-9p-KHk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5490" y="-995"/>
+            <point key="canvasLocation" x="-5458" y="-1487"/>
         </scene>
         <!--Signup View Controller - Title-->
         <scene sceneID="79s-cO-DVI">
@@ -1324,8 +1364,8 @@
                     <navigationItem key="navigationItem" title="Title" id="hXJ-s7-EJh"/>
                     <connections>
                         <outlet property="bdayContainerView" destination="HO9-iQ-8Zu" id="Kan-Ua-4wV"/>
-                        <outlet property="bdayField" destination="goF-mc-TSF" id="FUq-1R-jqk"/>
-                        <outlet property="bmonthField" destination="NcY-iA-7uF" id="Zdh-hA-SVg"/>
+                        <outlet property="bdayField" destination="NcY-iA-7uF" id="hHF-PL-GKu"/>
+                        <outlet property="bmonthField" destination="goF-mc-TSF" id="Knj-4F-czv"/>
                         <outlet property="byearField" destination="R9v-6k-a57" id="BWc-EA-FE0"/>
                         <outlet property="createButton" destination="hPs-dU-t8i" id="PXz-gj-Xps"/>
                         <outlet property="emailContainerView" destination="qra-ZN-hUL" id="Osx-E7-UuY"/>

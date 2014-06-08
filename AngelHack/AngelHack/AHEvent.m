@@ -53,37 +53,33 @@
 
 - (void)setType:(AHEventType)type
 {
-    NSString *typeToString = @"";
-
     switch (type) {
         case AHEventTypeHappyHour:
-            typeToString = @"happyhour";
+            self[@"type"]= @"happyhour";
             break;
         
         case AHEventTypeSports:
-            typeToString = @"sports";
+            self[@"type"]= @"sports";
             break;
         
         case AHEventTypeCoffee:
-            typeToString = @"coffee";
+            self[@"type"]= @"coffee";
             break;
             
         case AHEventTypeMeal:
-            typeToString = @"meal";
+            self[@"type"]= @"meal";
             break;
             
         case AHEventTypeMeeting:
-            typeToString = @"meeting";
+            self[@"type"]= @"meeting";
             break;
             
         case AHEventTypeBirthday:
-            typeToString = @"birthday";
+            self[@"type"]= @"birthday";
             break;
         
         default:
             break;
-            
-        self[@"type"]=typeToString;
     }
 }
 

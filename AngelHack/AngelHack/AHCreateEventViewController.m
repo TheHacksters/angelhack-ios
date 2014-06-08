@@ -7,6 +7,7 @@
 //
 
 #import "AHCreateEventViewController.h"
+#import "AHModels.h"
 #import "AHEvent.h"
 #import "AHBorderedColorButton.h"
 
@@ -32,7 +33,9 @@
 // Text Fields
 @property (weak, nonatomic) IBOutlet UITextField *eventNameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *eventLocationTextField;
-@property (weak, nonatomic) IBOutlet UITextField *eventDateTextField;
+@property (weak, nonatomic) IBOutlet UITextField *eventDayTextField;
+@property (weak, nonatomic) IBOutlet UITextField *eventMonthTextField;
+@property (weak, nonatomic) IBOutlet UITextField *eventYearTextField;
 
 // Create Button
 @property (weak, nonatomic) IBOutlet AHBorderedColorButton *createNewEventButton;
@@ -97,7 +100,23 @@
 
 #pragma mark - Create New Event
 
-- (IBAction)creteNewEvent:(id)sender {
+- (IBAction)creteNewEvent:(id)sender
+{
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *components = [[NSDateComponents alloc] init];
+    
+    NSLog(@"%d / %d / %d", [self.eventDayTextField.text integerValue],[self.eventMonthTextField.text integerValue],[self.eventYearTextField.text integerValue]);
+    
+    [components setDay:[self.eventDayTextField.text integerValue]];
+    [components setMonth:[self.eventMonthTextField.text integerValue]];
+    [components setYear:[self.eventYearTextField.text integerValue]];
+    NSDate *date = [calendar dateFromComponents:components];
+    
+    NSLog(@"DATE %@", date);
+    
+    AHCompany *stepCompany = [[AHCompany alloc] init];
+    
+    AHEvent *newEvent = [[AHEvent alloc] initWithName:self.eventNameTextField.text Type:self.selectedEventType Date:date Location:self.eventLocationTextField.text andCompany: stepCompany];
 }
 
 #pragma mark - Keyboard Dismissal
@@ -106,7 +125,9 @@
 {
     [self.eventNameTextField resignFirstResponder];
     [self.eventLocationTextField resignFirstResponder];
-    [self.eventDateTextField resignFirstResponder];
+    [self.eventDayTextField resignFirstResponder];
+    [self.eventMonthTextField resignFirstResponder];
+    [self.eventYearTextField resignFirstResponder];
 }
 
 #pragma mark - Status Bar Style
