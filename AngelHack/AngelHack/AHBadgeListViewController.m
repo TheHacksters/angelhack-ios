@@ -46,6 +46,12 @@
 }
 */
 
+#pragma mark - Cancel Event Creation
+- (IBAction)popViewController:(id)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 #pragma mark - Status Bar Style
 - (UIStatusBarStyle)preferredStatusBarStyle
 {

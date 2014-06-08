@@ -599,7 +599,18 @@
                                     <color key="textColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="Companies" id="QIl-j6-Tet"/>
+                                    <navigationItem title="Companies" id="QIl-j6-Tet">
+                                        <barButtonItem key="leftBarButtonItem" image="ic_tab_username" id="OHa-AR-oB5">
+                                            <connections>
+                                                <segue destination="b31-jY-zPr" kind="push" id="JPQ-KP-Fa3"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" image="ic_tab_hall" id="tQK-FM-x4S">
+                                            <connections>
+                                                <segue destination="rXf-gi-Ibk" kind="push" id="9u9-V3-KsE"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" delaysContentTouches="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="64" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="s2n-3m-KEt">
@@ -642,7 +653,7 @@
                                                     <color key="textColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2AG-nV-AfZ">
+                                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2AG-nV-AfZ">
                                                     <rect key="frame" x="1" y="1" width="62" height="62"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.31372550129890442" green="0.45882353186607361" blue="0.54901963472366333" alpha="1" colorSpace="calibratedRGB"/>
@@ -814,7 +825,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ETi-Rq-eRw">
-                                                    <rect key="frame" x="276" y="10" width="44" height="44"/>
+                                                    <rect key="frame" x="276" y="21" width="44" height="44"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" image="ic_confirm">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -824,7 +835,7 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rs6-bN-ifG">
-                                                    <rect key="frame" x="236" y="12" width="44" height="44"/>
+                                                    <rect key="frame" x="236" y="23" width="44" height="44"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" image="ic_cancel">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -949,13 +960,20 @@
                             <navigationBar appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jEp-cL-LLk">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="barTintColor" red="0.31372549020000001" green="0.45882352939999999" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <textAttributes key="titleTextAttributes">
                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                     <color key="textColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="Hall of Badges" id="mP6-ZK-OHP"/>
+                                    <navigationItem title="Hall of Badges" id="mP6-ZK-OHP">
+                                        <barButtonItem key="leftBarButtonItem" image="ic_back" id="aqU-54-11r">
+                                            <connections>
+                                                <action selector="popViewController:" destination="rXf-gi-Ibk" id="t4E-CE-vdP"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <imageView appearanceType="aqua" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="img_badge_meal" translatesAutoresizingMaskIntoConstraints="NO" id="TIp-ig-CV2">
@@ -1045,6 +1063,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.50588238240000005" green="0.67450982329999998" blue="0.77254903320000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="7a6-bm-sKc"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2iA-A1-O4j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1757,20 +1776,30 @@
                                     <action selector="pickPhoto:" destination="b31-jY-zPr" eventType="touchUpInside" id="Q48-eZ-JJJ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vkp-0D-wPb">
+                                <rect key="frame" x="5" y="20" width="44" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="ic_back">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="popViewController:" destination="b31-jY-zPr" eventType="touchUpInside" id="kwi-Va-Gis"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.5058823823928833" green="0.67450982332229614" blue="0.77254903316497803" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="yvQ-IG-1UR"/>
                     <connections>
                         <outlet property="bdayLabel" destination="tP6-XA-HeC" id="aqd-SI-bl7"/>
                         <outlet property="changePhoto" destination="Xmp-cd-3bt" id="904-Um-Eeu"/>
                         <outlet property="emailLabel" destination="qN1-HJ-YPE" id="8O8-J9-jWq"/>
                         <outlet property="nameLabel" destination="M30-TJ-fcp" id="9FI-cb-8Wx"/>
-                        <segue destination="vXZ-lx-hvc" kind="modal" identifier="successLogout" id="zxc-RL-Zuh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3zg-ij-Trr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-7413" y="-172"/>
+            <point key="canvasLocation" x="-7383" y="-307"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QzX-Ks-Q2g">
@@ -1831,6 +1860,8 @@
         <image name="ic_small_meal" width="20" height="38"/>
         <image name="ic_small_meeting" width="28" height="26"/>
         <image name="ic_small_sport" width="28" height="28"/>
+        <image name="ic_tab_hall" width="36" height="36"/>
+        <image name="ic_tab_username" width="36" height="36"/>
         <image name="ic_users" width="30" height="24"/>
         <image name="img-input-line" width="216" height="10"/>
         <image name="img-logo" width="480" height="256"/>
@@ -1860,7 +1891,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="ulF-cm-f4k"/>
-        <segue reference="zxc-RL-Zuh"/>
         <segue reference="Zaw-dN-qex"/>
     </inferredMetricsTieBreakers>
 </document>

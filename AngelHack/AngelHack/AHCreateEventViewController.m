@@ -90,7 +90,7 @@
 - (IBAction)mealTab:(id)sender {
     [self.tabBackgrounds bringSubviewToFront:self.mealTabBackground];
     self.selectedEventType = AHEventTypeMeal;
-    self.createNewEventButton.normalStateColor = [UIColor colorWithRed:136.0f/255.0f green:84.0f/255.0f blue:173.0f/255.0f alpha:1.0f];
+    self.createNewEventButton.normalStateColor = [UIColor colorWithRed:144.0f/255.0f green:50.0f/255.0f blue:50.0f/255.0f alpha:1.0f];
 }
 - (IBAction)meetingTab:(id)sender {
     [self.tabBackgrounds bringSubviewToFront:self.meetingTabBackground];

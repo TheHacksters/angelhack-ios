@@ -62,7 +62,8 @@
 - (IBAction)performLogout:(id)sender
 {
     [AHUser logOut];
-    [self performSegueWithIdentifier:@"successLogout" sender:self];
+    //[self performSegueWithIdentifier:@"successLogout" sender:self];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - Upload Photo
@@ -98,6 +99,12 @@
         }
     }];
     
+}
+
+#pragma mark - Cancel Event Creation
+- (IBAction)popViewController:(id)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark - Status Bar Style

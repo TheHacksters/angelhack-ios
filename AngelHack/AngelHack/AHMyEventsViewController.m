@@ -53,6 +53,7 @@
     NSString *title = [self.user.selectedCompany getName];
     self.title = title;
     self.navigationItem.title = title;
+    self.navigationController.navigationItem.title = title;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -114,7 +115,7 @@
     AHEvent *event;
     
     if (indexPath.section == 0) {
-        event = (AHEvent *)[self.events objectAtIndex:indexPath.row];
+        event = (AHEvent *)[self.eventInvitations objectAtIndex:indexPath.row];
         identifier = eventInviteCellIdentifier;
         AHEventInviteTableViewCell *cell = (AHEventInviteTableViewCell *)[tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
         cell.name.text = [event getName];
@@ -178,7 +179,7 @@
 #pragma mark - Cancel Event Creation
 - (IBAction)popViewController:(id)sender
 {
-    [self.navigationController popToRootViewControllerAnimated:YES];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 
