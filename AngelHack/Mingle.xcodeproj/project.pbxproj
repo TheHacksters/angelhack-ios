@@ -48,7 +48,6 @@
 		EA9828F519439E09004510C5 /* AHSingleCoWorkerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9828F419439E09004510C5 /* AHSingleCoWorkerViewController.m */; };
 		EA9828F819439E47004510C5 /* AHEventInviteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9828F719439E47004510C5 /* AHEventInviteViewController.m */; };
 		EA9828FB19439E78004510C5 /* AHMyEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9828FA19439E78004510C5 /* AHMyEventsViewController.m */; };
-		EA9828FE19439F26004510C5 /* AHSingleEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9828FD19439F26004510C5 /* AHSingleEventViewController.m */; };
 		EA98290119439F2F004510C5 /* AHCreateEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA98290019439F2F004510C5 /* AHCreateEventViewController.m */; };
 		EA9829041943C3BC004510C5 /* AHCreateEmailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9829031943C3BC004510C5 /* AHCreateEmailTableViewCell.m */; };
 		EAFCCF431943EAC200F34D4F /* AHCompany.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFCCF421943EAC200F34D4F /* AHCompany.m */; };
@@ -129,8 +128,6 @@
 		EA9828F719439E47004510C5 /* AHEventInviteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHEventInviteViewController.m; sourceTree = "<group>"; };
 		EA9828F919439E78004510C5 /* AHMyEventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHMyEventsViewController.h; sourceTree = "<group>"; };
 		EA9828FA19439E78004510C5 /* AHMyEventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHMyEventsViewController.m; sourceTree = "<group>"; };
-		EA9828FC19439F26004510C5 /* AHSingleEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHSingleEventViewController.h; sourceTree = "<group>"; };
-		EA9828FD19439F26004510C5 /* AHSingleEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHSingleEventViewController.m; sourceTree = "<group>"; };
 		EA9828FF19439F2F004510C5 /* AHCreateEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHCreateEventViewController.h; sourceTree = "<group>"; };
 		EA98290019439F2F004510C5 /* AHCreateEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHCreateEventViewController.m; sourceTree = "<group>"; };
 		EA9829021943C3BC004510C5 /* AHCreateEmailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHCreateEmailTableViewCell.h; sourceTree = "<group>"; };
@@ -428,7 +425,6 @@
 			isa = PBXGroup;
 			children = (
 				EA9828DB19439CDB004510C5 /* Invite */,
-				EA9828CC19439BE0004510C5 /* SingleEvent */,
 				EA9828CB19439BDA004510C5 /* CreateEvent */,
 				EA9828CA19439BCF004510C5 /* MyEvents */,
 			);
@@ -468,15 +464,6 @@
 				EA98290019439F2F004510C5 /* AHCreateEventViewController.m */,
 			);
 			name = CreateEvent;
-			sourceTree = "<group>";
-		};
-		EA9828CC19439BE0004510C5 /* SingleEvent */ = {
-			isa = PBXGroup;
-			children = (
-				EA9828FC19439F26004510C5 /* AHSingleEventViewController.h */,
-				EA9828FD19439F26004510C5 /* AHSingleEventViewController.m */,
-			);
-			name = SingleEvent;
 			sourceTree = "<group>";
 		};
 		EA9828D719439C93004510C5 /* BadgeList */ = {
@@ -624,7 +611,6 @@
 				EA9828FB19439E78004510C5 /* AHMyEventsViewController.m in Sources */,
 				EA9828F819439E47004510C5 /* AHEventInviteViewController.m in Sources */,
 				EA8C844D19437AFD006793C5 /* AHEvent.m in Sources */,
-				EA9828FE19439F26004510C5 /* AHSingleEventViewController.m in Sources */,
 				EA9828E219439D55004510C5 /* AHCreateCompanyViewController.m in Sources */,
 				EAFCCF431943EAC200F34D4F /* AHCompany.m in Sources */,
 				EA8C840619437261006793C5 /* AHAppDelegate.m in Sources */,

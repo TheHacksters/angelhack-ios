@@ -577,32 +577,6 @@
             </objects>
             <point key="canvasLocation" x="-4971" y="-1487"/>
         </scene>
-        <!--Single Event View Controller-->
-        <scene sceneID="cky-vA-m3L">
-            <objects>
-                <viewController id="Qok-ne-XbY" customClass="AHSingleEventViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="vDp-v4-lHp"/>
-                        <viewControllerLayoutGuide type="bottom" id="0ew-DU-joP"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="AYj-cd-LeF">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SINGE EVENT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="brL-jl-fDK">
-                                <rect key="frame" x="105" y="273" width="110" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="H2i-FH-b20" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-5365" y="-794"/>
-        </scene>
         <!--My Companies View Controller-->
         <scene sceneID="3Md-vK-ohG">
             <objects>
