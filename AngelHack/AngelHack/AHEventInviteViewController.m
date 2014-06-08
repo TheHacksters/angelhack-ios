@@ -128,7 +128,7 @@
 
 - (IBAction)doneInviteCoworkers:(id)sender
 {
-    
+    [self.delegate usersArray:self.emails];
 }
 
 #pragma mark - Support Methods

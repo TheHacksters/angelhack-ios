@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol BLADelegate
+@optional
+- (void)usersArray:(NSArray *)array;
+@end
+
 @interface AHEventInviteViewController : UIViewController
+
+@property (weak, nonatomic) id<BLADelegate>delegate;
 
 @end
