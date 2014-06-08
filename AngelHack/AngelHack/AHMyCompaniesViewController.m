@@ -36,8 +36,6 @@
 {
     [super viewDidLoad];
     
-    self.companies = NO;
-    
     // Setting Up Table View
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -46,24 +44,7 @@
     // Parse Objects
     self.user = (AHUser *)[PFUser currentUser];
 
-    NSArray *companyPointers = [self.user getCompanies];
-    self.numberOfCompanies = [companyPointers count];
-    
-    PFQuery *query = [AHUser query];
-    
-    [query includeKey:@"companies"];
-    
-//    [self.activityIndicator startAnimating];
-    [query getObjectInBackgroundWithId:self.user.objectId block:^(PFObject *object, NSError *error) {
-        if (error) {
-            NSLog(@"ERROR: %@", error);
-        } else {
-            self.companies = [object valueForKey:@"companies"];
-            self.companiesFetched = YES;
-//            [self.activityIndicator stopAnimating];
-            [self.tableView reloadData];
-        }
-    }];
+    self.companies = [self.user getCompanies];
 }
 
 - (void)didReceiveMemoryWarning
@@ -93,7 +74,6 @@
 {
     static NSString *companyCellIdentifier = @"AHCompanyTableViewCell";
     
-    
     AHCompanyTableViewCell *cell;
     
     AHCompany *company = (AHCompany *)[self.companies objectAtIndex:indexPath.row];
@@ -104,12 +84,8 @@
         NSLog(@"NIL CELL");
     }
     
-    if (self.companiesFetched) {
-        NSArray *members = (NSArray *)company[@"members"];
-        
-        cell.name.text = [company getName];
-        cell.numberOfUsers.text = [NSString stringWithFormat:@"%d", members.count];
-    }
+    cell.name.text = [company getName];
+    cell.numberOfUsers.text = [NSString stringWithFormat:@"%d", [company memberCount] ];
     
     return cell;
 }

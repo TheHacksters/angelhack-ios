@@ -10,6 +10,8 @@
 
 @implementation AHUser
 
+@synthesize selectedCompany;
+
 #pragma mark - Init
 - (AHUser *)initWithUsername:(NSString *)username andPassword:(NSString *)password andName: (NSString *)name andBirthday: (NSString *)birthday
 {
@@ -19,7 +21,9 @@
     [response setPassword:password];
     [response setName:name];
     [response setBirthday:birthday];
-    
+
+    self.selectedCompany = nil;
+
     return response;
 }
 

@@ -13,6 +13,8 @@
 
 @interface AHCompany : PFObject <PFSubclassing>
 
+@property (assign, nonatomic) NSInteger count;
+
 + (NSString *)parseClassName;
 
 - (AHCompany *)initWithName:(NSString *)name andAdmin:(AHUser *)admin;
@@ -21,5 +23,7 @@
 
 - (void)setName:(NSString *)name;
 - (void)setAdmin:(AHUser *)admin;
+
+- (NSInteger)memberCount;
 
 @end

@@ -11,6 +11,8 @@
 
 @implementation AHCompany
 
+@synthesize count;
+
 #pragma mark - Parse
 + (NSString *)parseClassName
 {
@@ -46,6 +48,13 @@
 - (AHUser *)getAdmin
 {
     return (AHUser *)[self objectForKey:@"admin"];
+}
+
+- (NSInteger)memberCount
+{
+    NSArray *members = (NSArray *)self[@"members"];
+    
+    return [members count];
 }
 
 #pragma mark - Setters

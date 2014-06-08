@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class AHCompany;
+
 @interface AHMyEventsViewController : UIViewController
+
+
 
 @end

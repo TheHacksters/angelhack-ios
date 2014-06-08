@@ -16,6 +16,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *numberOfUsers;
 @property (weak, nonatomic) IBOutlet UIImageView *logo;
 
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *imageActivityIndicator;
+
 @property (weak, nonatomic) AFCompany *company;
 
 @end

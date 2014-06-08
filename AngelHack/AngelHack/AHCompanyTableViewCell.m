@@ -30,6 +30,8 @@
             break;
         }
     }
+    
+    self.name.clipsToBounds = NO;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated

@@ -13,6 +13,8 @@
 
 @interface AHUser : PFUser
 
+@property (strong, nonatomic) AHCompany *selectedCompany;
+
 - (AHUser *)initWithUsername:(NSString *)username andPassword:(NSString *)password andName: (NSString *)name andBirthday: (NSDate *)birthday;
 
 - (void)addCompany:(AHCompany *)company;
