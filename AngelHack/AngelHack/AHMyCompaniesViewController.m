@@ -16,6 +16,9 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
+@property (assign, nonatomic) BOOL companiesFetched;
+@property (assign, nonatomic) NSInteger numberOfCompanies;
+
 @end
 
 @implementation AHMyCompaniesViewController
@@ -33,13 +36,34 @@
 {
     [super viewDidLoad];
     
+    self.companies = NO;
+    
     // Setting Up Table View
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
     // Parse Objects
     self.user = (AHUser *)[PFUser currentUser];
-    self.companies = @[@"NOME DA CIA", @"BITPAY", @"AMAZON"];
+    
+    
+    NSArray *companyPointers = [self.user getCompanies];
+    self.numberOfCompanies = [companyPointers count];
+    
+    PFQuery *query = [AHUser query];
+    
+    [query includeKey:@"companies"];
+    
+    [self.activityIndicator startAnimating];
+    [query getObjectInBackgroundWithId:self.user.objectId block:^(PFObject *object, NSError *error) {
+        if (error) {
+            NSLog(@"ERROR: %@", error);
+        } else {
+            self.companies = [object valueForKey:@"companies"];
+            self.companiesFetched = YES;
+            [self.activityIndicator stopAnimating];
+            [self.tableView reloadData];
+        }
+    }];
 }
 
 - (void)didReceiveMemoryWarning
@@ -62,7 +86,7 @@
 #pragma mark - UITableView DataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.companies count];
+    return [[self.user getCompanies] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -72,7 +96,7 @@
     
     AHCompanyTableViewCell *cell;
     
-    NSString *company = [self.companies objectAtIndex:indexPath.row];
+    AHCompany *company = (AHCompany *)[self.companies objectAtIndex:indexPath.row];
     
     cell = (AHCompanyTableViewCell *)[tableView dequeueReusableCellWithIdentifier:companyCellIdentifier forIndexPath:indexPath];
     
@@ -80,7 +104,9 @@
         NSLog(@"NIL CELL");
     }
     
-    cell.name.text = company;
+    if (self.companiesFetched) {
+        cell.name.text = [company getName];
+    }
     
     return cell;
 }

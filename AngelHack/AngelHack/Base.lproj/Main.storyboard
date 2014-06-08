@@ -304,11 +304,12 @@
                         <outlet property="emailContainerView" destination="VA5-Fc-fOv" id="wdE-47-EeH"/>
                         <outlet property="emailField" destination="aRh-pj-6Vd" id="IJp-Wn-NAS"/>
                         <outlet property="emailTableView" destination="D3N-45-Oc1" id="c2T-5p-QGn"/>
+                        <segue destination="GW0-cR-cV4" kind="push" id="kZG-C4-QaU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gIe-s8-fL9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-7227" y="-1859"/>
+            <point key="canvasLocation" x="-7168" y="-2514"/>
         </scene>
         <!--Co Workers List View Controller-->
         <scene sceneID="Md8-hx-4fk">
@@ -523,6 +524,10 @@
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                 </button>
+                                                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="fT7-FF-6kO">
+                                                    <rect key="frame" x="14" y="13" width="37" height="37"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </activityIndicatorView>
                                             </subviews>
                                             <color key="backgroundColor" red="0.50588238240000005" green="0.67450982329999998" blue="0.77254903320000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
@@ -559,7 +564,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="ScD-JF-IEh"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="fT7-FF-6kO" id="Zzd-do-NWd"/>
                         <outlet property="tableView" destination="s2n-3m-KEt" id="dCs-Pf-Vik"/>
+                        <segue destination="GW0-cR-cV4" kind="push" id="Zaw-dN-qex"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kQP-LH-SlQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -587,10 +594,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="xdd-Hr-ehG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SMi-Wz-9Kw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-6417" y="-1887"/>
+            <point key="canvasLocation" x="-6685" y="-1859"/>
         </scene>
         <!--Badge List View Controller-->
         <scene sceneID="aTM-mv-cL1">
@@ -973,5 +981,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="ulF-cm-f4k"/>
+        <segue reference="Zaw-dN-qex"/>
     </inferredMetricsTieBreakers>
 </document>
