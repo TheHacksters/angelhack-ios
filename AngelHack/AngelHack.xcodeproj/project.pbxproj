@@ -50,6 +50,7 @@
 		EA9828FE19439F26004510C5 /* AHSingleEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9828FD19439F26004510C5 /* AHSingleEventViewController.m */; };
 		EA98290119439F2F004510C5 /* AHCreateEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA98290019439F2F004510C5 /* AHCreateEventViewController.m */; };
 		EA9829041943C3BC004510C5 /* AHCreateEmailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9829031943C3BC004510C5 /* AHCreateEmailTableViewCell.m */; };
+		EAFCCF431943EAC200F34D4F /* AHCompany.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFCCF421943EAC200F34D4F /* AHCompany.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,8 +100,6 @@
 		EA8C84461943762D006793C5 /* AHUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHUser.m; sourceTree = "<group>"; };
 		EA8C844B19437AFD006793C5 /* AHEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHEvent.h; sourceTree = "<group>"; };
 		EA8C844C19437AFD006793C5 /* AHEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHEvent.m; sourceTree = "<group>"; };
-		EA8C844F19437B0A006793C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Base; path = Base.lproj/AHCompany.h; sourceTree = "<group>"; };
-		EA8C845119437B0A006793C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Base; path = Base.lproj/AHCompany.m; sourceTree = "<group>"; };
 		EA8C845219437B12006793C5 /* AHPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHPost.h; sourceTree = "<group>"; };
 		EA8C845319437B12006793C5 /* AHPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHPost.m; sourceTree = "<group>"; };
 		EA8C845719437C25006793C5 /* AHLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHLoginViewController.h; sourceTree = "<group>"; };
@@ -133,6 +132,8 @@
 		EA98290019439F2F004510C5 /* AHCreateEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHCreateEventViewController.m; sourceTree = "<group>"; };
 		EA9829021943C3BC004510C5 /* AHCreateEmailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHCreateEmailTableViewCell.h; sourceTree = "<group>"; };
 		EA9829031943C3BC004510C5 /* AHCreateEmailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHCreateEmailTableViewCell.m; sourceTree = "<group>"; };
+		EAFCCF411943EAC200F34D4F /* AHCompany.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHCompany.h; sourceTree = "<group>"; };
+		EAFCCF421943EAC200F34D4F /* AHCompany.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHCompany.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -315,8 +316,8 @@
 		EA8C844819437AA1006793C5 /* Company */ = {
 			isa = PBXGroup;
 			children = (
-				EA8C844E19437B0A006793C5 /* AHCompany.h */,
-				EA8C845019437B0A006793C5 /* AHCompany.m */,
+				EAFCCF411943EAC200F34D4F /* AHCompany.h */,
+				EAFCCF421943EAC200F34D4F /* AHCompany.m */,
 			);
 			name = Company;
 			sourceTree = "<group>";
@@ -621,6 +622,7 @@
 				EA8C844D19437AFD006793C5 /* AHEvent.m in Sources */,
 				EA9828FE19439F26004510C5 /* AHSingleEventViewController.m in Sources */,
 				EA9828E219439D55004510C5 /* AHCreateCompanyViewController.m in Sources */,
+				EAFCCF431943EAC200F34D4F /* AHCompany.m in Sources */,
 				EA9828EF19439DE3004510C5 /* AHSingleBadgeViewController.m in Sources */,
 				EA8C840619437261006793C5 /* AHAppDelegate.m in Sources */,
 				EA98290119439F2F004510C5 /* AHCreateEventViewController.m in Sources */,
@@ -681,22 +683,6 @@
 				EA8C841E19437261006793C5 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		EA8C844E19437B0A006793C5 /* AHCompany.h */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EA8C844F19437B0A006793C5 /* Base */,
-			);
-			name = AHCompany.h;
-			sourceTree = "<group>";
-		};
-		EA8C845019437B0A006793C5 /* AHCompany.m */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EA8C845119437B0A006793C5 /* Base */,
-			);
-			name = AHCompany.m;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

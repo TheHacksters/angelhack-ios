@@ -8,6 +8,7 @@
 
 #import "AHCreateCompanyViewController.h"
 #import "AHCreateEmailTableViewCell.h"
+#import "AHModels.h"
 #import "AHUtils.h"
 
 @interface AHCreateCompanyViewController () <UITableViewDelegate, UITableViewDataSource, TableCellDelegate>
@@ -85,7 +86,7 @@
     return 60;
 }
 
-- (float)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+- (double)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
     // This will create a "invisible" footer
     return 0.01f;
 }
@@ -162,5 +163,10 @@
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
+#pragma mark - Create Company Manager
+- (IBAction)createCompany:(id)sender
+{
+    AHCompany *newCompany = [[AHCompany alloc] initWithName:self.companyField.text andAdmin:[AHUser currentUser]];
+}
 
 @end

@@ -109,8 +109,8 @@
         return;
     }
     
-#warning Ajustar a data
-    AHUser *myUser = [[AHUser alloc] initWithUsername:self.emailField.text andPassword:self.pwdField.text andName: self.nameField.text andBirthday: @"a"];
+#warning Testar a data
+    AHUser *myUser = [[AHUser alloc] initWithUsername:self.emailField.text andPassword:self.pwdField.text andName: self.nameField.text andBirthday: [NSDate date]];
     
     
     [myUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {

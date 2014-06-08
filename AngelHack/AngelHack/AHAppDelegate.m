@@ -18,22 +18,11 @@
     // Uncomment and fill in with your Parse credentials:
     [Parse setApplicationId:@"6jzH3my3Ty5KlVCWBIAyUTzYJwFEzG9KNXp6RYTC"
                   clientKey:@"9Q3cqztyphOXA2nEpXoFXw9NbcB1PylzBtBYl3Tn"];
-    //
-    // If you are using Facebook, uncomment and add your FacebookAppID to your bundle's plist as
-    // described here: https://developers.facebook.com/docs/getting-started/facebook-sdk-for-ios/
-    // [PFFacebookUtils initializeFacebook];
-    // ****************************************************************************
-    
-    //[PFUser enableAutomaticUser];
-    
-    PFACL *defaultACL = [PFACL ACL];
-    
-    // If you would like all objects to be private by default, remove this line.
-    [defaultACL setPublicReadAccess:YES];
-    
-    [PFACL setDefaultACL:defaultACL withAccessForCurrentUser:YES];
     
     [AHUser registerSubclass];
+    [AHEvent registerSubclass];
+    [AHPost registerSubclass];
+    [AHCompany registerSubclass];
     
     if (application.applicationState != UIApplicationStateBackground) {
         BOOL preBackgroundPush = ![application respondsToSelector:@selector(backgroundRefreshStatus)];

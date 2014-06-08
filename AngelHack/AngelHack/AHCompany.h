@@ -9,8 +9,17 @@
 #import <Parse/Parse.h>
 #import "AHModels.h"
 
+@class AHUser;
+
 @interface AHCompany : PFObject <PFSubclassing>
 
 + (NSString *)parseClassName;
+
+- (AHCompany *)initWithName:(NSString *)name andAdmin:(AHUser *)admin;
+- (NSString *)getName;
+- (AHUser *)getAdmin;
+
+- (void)setName:(NSString *)name;
+- (void)setAdmin:(AHUser *)admin;
 
 @end

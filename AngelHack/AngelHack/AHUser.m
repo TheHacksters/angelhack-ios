@@ -23,6 +23,35 @@
     return response;
 }
 
+#pragma mark - Relational Methods
+- (void)addCompany:(AHCompany *)company
+{
+    NSArray *companies = self[@"companies"];
+    if (!companies) {
+        self[@"companies"] = @[company];
+    } else {
+        [self addObject:company forKey:@"companies"];
+    }
+
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [self save];
+    });
+     
+//    [self saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+//        if (!succeeded) {
+//            NSLog(@"ERROR");
+//        } else {
+//            NSLog(@"OK");
+//        }
+//    }];
+}
+
+- (NSMutableArray *)getCompanies
+{
+    [self fetchIfNeeded];
+    return self[@"companies"];
+}
+
 #pragma mark - Getters
 - (NSString *)getObjectId
 {
@@ -44,11 +73,6 @@
     return self[@"birthDay"];
 }
 
-- (NSArray *)getCompanies
-{
-    return self[@"companies"];
-}
-
 - (BOOL)isEmailVerified
 {
     return [self[@"emailVerified"] boolValue];
@@ -60,9 +84,9 @@
     self[@"name"]=name;
 }
 
-- (void)setBirthday:(NSString *)birthday
+- (void)setBirthday:(NSDate *)birthday
 {
-    self[@"birthday"]=birthday;
+    self[@"birthDay"]=birthday;
 }
 
 @end

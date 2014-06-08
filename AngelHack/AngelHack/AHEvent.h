@@ -7,7 +7,6 @@
 //
 
 #import <Parse/Parse.h>
-#import "AHModels.h"
 
 @interface AHEvent : PFObject <PFSubclassing>
 

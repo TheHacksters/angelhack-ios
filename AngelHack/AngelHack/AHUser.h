@@ -9,8 +9,22 @@
 #import <Parse/Parse.h>
 #import "AHModels.h"
 
+@class AHCompany;
+
 @interface AHUser : PFUser
 
-- (AHUser *)initWithUsername:(NSString *)username andPassword:(NSString *)password andName: (NSString *)name andBirthday: (NSString *)birthday;
+- (AHUser *)initWithUsername:(NSString *)username andPassword:(NSString *)password andName: (NSString *)name andBirthday: (NSDate *)birthday;
+
+- (void)addCompany:(AHCompany *)company;
+- (NSMutableArray *)getCompanies;
+
+- (NSString *)getObjectId;
+- (NSString *)getName;
+- (NSString *)getEmail;
+- (NSDate *)getBirthday;
+- (BOOL)isEmailVerified;
+
+- (void)setName:(NSString *)name;
+- (void)setBirthday:(NSString *)birthday;
 
 @end

@@ -225,6 +225,9 @@
                                         <integer key="value" value="22"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="createCompany:" destination="xLQ-NO-vye" eventType="touchUpInside" id="Dnw-3F-4Ye"/>
+                                </connections>
                             </button>
                             <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cvW-Ee-hS8">
                                 <rect key="frame" x="254" y="227" width="46" height="46"/>
