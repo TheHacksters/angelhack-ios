@@ -63,6 +63,8 @@
     blueBackgroundView.backgroundColor = [UIColor colorWithRed:0.41960784f green:0.5725490f blue:0.666666667f alpha:1.0f];
     UIImage *blueBackground = [AHUtils imageFromView:blueBackgroundView];
     [self.createButton setBackgroundImage:blueBackground forState:UIControlStateNormal];
+
+    self.emailTableView.sectionFooterHeight = 0.0f;
 }
 
 - (void)didReceiveMemoryWarning
@@ -86,10 +88,10 @@
     return 60;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    // This will create a "invisible" footer
-    return 0.01f;
-}
+//- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+//    // This will create a "invisible" footer
+//    return 0.01f;
+//}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
