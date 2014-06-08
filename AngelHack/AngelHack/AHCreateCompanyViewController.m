@@ -11,15 +11,17 @@
 #import "AHModels.h"
 #import "AHUtils.h"
 
-@interface AHCreateCompanyViewController () <UITableViewDelegate, UITableViewDataSource, TableCellDelegate>
+@interface AHCreateCompanyViewController () <UITableViewDelegate, UITableViewDataSource, TableCellDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *companyField;
 @property (weak, nonatomic) IBOutlet UITextField *emailField;
 @property (weak, nonatomic) IBOutlet UIView *companyContainerView;
 @property (weak, nonatomic) IBOutlet UIView *emailContainerView;
 @property (weak, nonatomic) IBOutlet UIButton *createButton;
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIButton *changePhoto;
 @property (weak, nonatomic) IBOutlet UITableView *emailTableView;
+
+@property (strong, nonatomic) PFFile *imageFile;
 
 @property (strong, nonatomic) NSMutableArray *emails;
            
@@ -47,7 +49,6 @@
     self.emailTableView.delegate = self;
     self.emailTableView.dataSource = self;
     
-    self.scrollView.backgroundColor = [UIColor clearColor];
     self.emailTableView.backgroundColor = [UIColor clearColor];
 
     //Change Placeholder Font Color
@@ -171,10 +172,37 @@
     AHCompany *myCompany = [[AHCompany alloc] initWithName:self.companyField.text andAdmin:[AHUser currentUser]];
     [myCompany save];
     
+    myCompany[@"image"]=self.imageFile;
+    [myCompany save];
+    
     [myCompany addMember:[AHUser currentUser]];
     [myCompany batchInvite:self.emails];
     
     [self.emails removeAllObjects];
+}
+
+#pragma mark - Upload Photo
+- (IBAction)pickPhoto:(id)sender
+{
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    
+    [self presentViewController:picker animated:YES completion:NULL];
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    
+    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+    [self.changePhoto setImage:chosenImage forState:UIControlStateNormal];
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+    
+    // Convert to JPEG with 50% quality
+    NSData* data = UIImageJPEGRepresentation(chosenImage, 0.5f);
+    PFFile *image = [PFFile fileWithName:@"Image.jpg" data:data];
+    
+    self.imageFile = image;
 }
 
 @end

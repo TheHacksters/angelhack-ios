@@ -27,6 +27,8 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *createButton;
 
+@property (weak, nonatomic) IBOutlet UIImageView *logoImageView;
+
 @end
 
 @implementation AHSignupViewController

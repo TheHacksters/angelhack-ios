@@ -16,6 +16,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *bdayLabel;
 @property (weak, nonatomic) IBOutlet UILabel *companyLabel;
 
+@property (weak, nonatomic) IBOutlet UIImageView *picImage;
+
 @end
 
 @implementation AHSingleCoWorkerViewController
@@ -32,7 +34,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    AHUser *coworker = [[AHUser alloc] init];
+    if (coworker[@"image"]) {
+        PFFile *imageFile = coworker[@"image"];
+        NSData *imageData = imageFile.getData;
+        UIImage *image = [UIImage imageWithData:imageData];
+        self.picImage.image = image;
+    }
 }
 
 - (void)didReceiveMemoryWarning

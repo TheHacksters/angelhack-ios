@@ -45,14 +45,11 @@
 		EA9828DE19439D2D004510C5 /* AHMyCompaniesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9828DD19439D2D004510C5 /* AHMyCompaniesViewController.m */; };
 		EA9828E219439D55004510C5 /* AHCreateCompanyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9828E119439D55004510C5 /* AHCreateCompanyViewController.m */; };
 		EA9828E519439D67004510C5 /* AHProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9828E419439D67004510C5 /* AHProfileViewController.m */; };
-		EA9828E919439D86004510C5 /* AHInviteMemberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9828E819439D86004510C5 /* AHInviteMemberViewController.m */; };
 		EA9828EC19439DD7004510C5 /* AHBadgeListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9828EB19439DD7004510C5 /* AHBadgeListViewController.m */; };
-		EA9828EF19439DE3004510C5 /* AHSingleBadgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9828EE19439DE3004510C5 /* AHSingleBadgeViewController.m */; };
 		EA9828F219439DF5004510C5 /* AHCoWorkersListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9828F119439DF5004510C5 /* AHCoWorkersListViewController.m */; };
 		EA9828F519439E09004510C5 /* AHSingleCoWorkerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9828F419439E09004510C5 /* AHSingleCoWorkerViewController.m */; };
 		EA9828F819439E47004510C5 /* AHEventInviteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9828F719439E47004510C5 /* AHEventInviteViewController.m */; };
 		EA9828FB19439E78004510C5 /* AHMyEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9828FA19439E78004510C5 /* AHMyEventsViewController.m */; };
-		EA9828FE19439F26004510C5 /* AHSingleEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9828FD19439F26004510C5 /* AHSingleEventViewController.m */; };
 		EA98290119439F2F004510C5 /* AHCreateEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA98290019439F2F004510C5 /* AHCreateEventViewController.m */; };
 		EA9829041943C3BC004510C5 /* AHCreateEmailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9829031943C3BC004510C5 /* AHCreateEmailTableViewCell.m */; };
 		EAFCCF431943EAC200F34D4F /* AHCompany.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFCCF421943EAC200F34D4F /* AHCompany.m */; };
@@ -127,12 +124,8 @@
 		EA9828E119439D55004510C5 /* AHCreateCompanyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHCreateCompanyViewController.m; sourceTree = "<group>"; };
 		EA9828E319439D67004510C5 /* AHProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHProfileViewController.h; sourceTree = "<group>"; };
 		EA9828E419439D67004510C5 /* AHProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHProfileViewController.m; sourceTree = "<group>"; };
-		EA9828E719439D86004510C5 /* AHInviteMemberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHInviteMemberViewController.h; sourceTree = "<group>"; };
-		EA9828E819439D86004510C5 /* AHInviteMemberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHInviteMemberViewController.m; sourceTree = "<group>"; };
 		EA9828EA19439DD7004510C5 /* AHBadgeListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHBadgeListViewController.h; sourceTree = "<group>"; };
 		EA9828EB19439DD7004510C5 /* AHBadgeListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHBadgeListViewController.m; sourceTree = "<group>"; };
-		EA9828ED19439DE3004510C5 /* AHSingleBadgeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHSingleBadgeViewController.h; sourceTree = "<group>"; };
-		EA9828EE19439DE3004510C5 /* AHSingleBadgeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHSingleBadgeViewController.m; sourceTree = "<group>"; };
 		EA9828F019439DF5004510C5 /* AHCoWorkersListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHCoWorkersListViewController.h; sourceTree = "<group>"; };
 		EA9828F119439DF5004510C5 /* AHCoWorkersListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHCoWorkersListViewController.m; sourceTree = "<group>"; };
 		EA9828F319439E09004510C5 /* AHSingleCoWorkerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHSingleCoWorkerViewController.h; sourceTree = "<group>"; };
@@ -141,8 +134,6 @@
 		EA9828F719439E47004510C5 /* AHEventInviteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHEventInviteViewController.m; sourceTree = "<group>"; };
 		EA9828F919439E78004510C5 /* AHMyEventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHMyEventsViewController.h; sourceTree = "<group>"; };
 		EA9828FA19439E78004510C5 /* AHMyEventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHMyEventsViewController.m; sourceTree = "<group>"; };
-		EA9828FC19439F26004510C5 /* AHSingleEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHSingleEventViewController.h; sourceTree = "<group>"; };
-		EA9828FD19439F26004510C5 /* AHSingleEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHSingleEventViewController.m; sourceTree = "<group>"; };
 		EA9828FF19439F2F004510C5 /* AHCreateEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHCreateEventViewController.h; sourceTree = "<group>"; };
 		EA98290019439F2F004510C5 /* AHCreateEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHCreateEventViewController.m; sourceTree = "<group>"; };
 		EA9829021943C3BC004510C5 /* AHCreateEmailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHCreateEmailTableViewCell.h; sourceTree = "<group>"; };
@@ -458,7 +449,6 @@
 			children = (
 				EA9828C919439BC9004510C5 /* HallBadges */,
 				EA9828C819439BC0004510C5 /* CoWorkers */,
-				EA9828C719439BA1004510C5 /* InviteMember */,
 				EA9828C619439B9A004510C5 /* Events */,
 			);
 			name = Company;
@@ -468,20 +458,10 @@
 			isa = PBXGroup;
 			children = (
 				EA9828DB19439CDB004510C5 /* Invite */,
-				EA9828CC19439BE0004510C5 /* SingleEvent */,
 				EA9828CB19439BDA004510C5 /* CreateEvent */,
 				EA9828CA19439BCF004510C5 /* MyEvents */,
 			);
 			name = Events;
-			sourceTree = "<group>";
-		};
-		EA9828C719439BA1004510C5 /* InviteMember */ = {
-			isa = PBXGroup;
-			children = (
-				EA9828E719439D86004510C5 /* AHInviteMemberViewController.h */,
-				EA9828E819439D86004510C5 /* AHInviteMemberViewController.m */,
-			);
-			name = InviteMember;
 			sourceTree = "<group>";
 		};
 		EA9828C819439BC0004510C5 /* CoWorkers */ = {
@@ -496,7 +476,6 @@
 		EA9828C919439BC9004510C5 /* HallBadges */ = {
 			isa = PBXGroup;
 			children = (
-				EA9828D819439CA0004510C5 /* SingleBadge */,
 				EA9828D719439C93004510C5 /* BadgeList */,
 			);
 			name = HallBadges;
@@ -521,15 +500,6 @@
 			name = CreateEvent;
 			sourceTree = "<group>";
 		};
-		EA9828CC19439BE0004510C5 /* SingleEvent */ = {
-			isa = PBXGroup;
-			children = (
-				EA9828FC19439F26004510C5 /* AHSingleEventViewController.h */,
-				EA9828FD19439F26004510C5 /* AHSingleEventViewController.m */,
-			);
-			name = SingleEvent;
-			sourceTree = "<group>";
-		};
 		EA9828D719439C93004510C5 /* BadgeList */ = {
 			isa = PBXGroup;
 			children = (
@@ -537,15 +507,6 @@
 				EA9828EB19439DD7004510C5 /* AHBadgeListViewController.m */,
 			);
 			name = BadgeList;
-			sourceTree = "<group>";
-		};
-		EA9828D819439CA0004510C5 /* SingleBadge */ = {
-			isa = PBXGroup;
-			children = (
-				EA9828ED19439DE3004510C5 /* AHSingleBadgeViewController.h */,
-				EA9828EE19439DE3004510C5 /* AHSingleBadgeViewController.m */,
-			);
-			name = SingleBadge;
 			sourceTree = "<group>";
 		};
 		EA9828D919439CAD004510C5 /* CoWorkersList */ = {
@@ -685,16 +646,13 @@
 				EA9828F819439E47004510C5 /* AHEventInviteViewController.m in Sources */,
 				1A1463FB19447B7900614B7C /* AHEventInviteTableViewCell.m in Sources */,
 				EA8C844D19437AFD006793C5 /* AHEvent.m in Sources */,
-				EA9828FE19439F26004510C5 /* AHSingleEventViewController.m in Sources */,
 				EA9828E219439D55004510C5 /* AHCreateCompanyViewController.m in Sources */,
 				1A1463FE19447B8600614B7C /* AHMyEventTableViewCell.m in Sources */,
 				EAFCCF431943EAC200F34D4F /* AHCompany.m in Sources */,
-				EA9828EF19439DE3004510C5 /* AHSingleBadgeViewController.m in Sources */,
 				EA8C840619437261006793C5 /* AHAppDelegate.m in Sources */,
 				EA98290119439F2F004510C5 /* AHCreateEventViewController.m in Sources */,
 				1A1463EC194455D200614B7C /* AHColoredPlaceholderTextField.m in Sources */,
 				1A1463EF1944627400614B7C /* AHBorderedColorButton.m in Sources */,
-				EA9828E919439D86004510C5 /* AHInviteMemberViewController.m in Sources */,
 				EA9829041943C3BC004510C5 /* AHCreateEmailTableViewCell.m in Sources */,
 				EA8C845419437B12006793C5 /* AHPost.m in Sources */,
 				EA9828F219439DF5004510C5 /* AHCoWorkersListViewController.m in Sources */,

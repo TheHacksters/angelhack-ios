@@ -106,6 +106,15 @@
     cell.numberOfUsers.text = [NSString stringWithFormat:@"%d", [company memberCount]];
     cell.indexPath = indexPath;
     
+    if (company[@"image"]) {
+        PFFile *imageFile = company[@"image"];
+        NSData *imageData = imageFile.getData;
+        UIImage *image = [UIImage imageWithData:imageData];
+        cell.logo.image = image;
+    } else {
+        cell.logo.image = [UIImage imageNamed:@"ic_no_companies"];
+    }
+    
     return cell;
 }
 

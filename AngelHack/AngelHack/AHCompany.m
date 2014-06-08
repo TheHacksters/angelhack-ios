@@ -31,8 +31,8 @@
         if(!succeeded) {
             NSLog(@"ERROR %@", error);
         } else {
-            AHUser *me = [AHUser currentUser];
-            [me addCompany:response];
+//            AHUser *me = [AHUser currentUser];
+//            [me addCompany:response];
         }
     }];
     
