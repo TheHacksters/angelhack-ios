@@ -35,15 +35,17 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+#pragma mark - Status Bar Style
+- (UIStatusBarStyle)preferredStatusBarStyle
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    return UIStatusBarStyleLightContent;
 }
-*/
+
+#pragma mark - Cancel Event Creation
+- (IBAction)popViewController:(id)sender
+{
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
 
 @end
