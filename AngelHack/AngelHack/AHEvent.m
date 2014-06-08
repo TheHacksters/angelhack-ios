@@ -93,4 +93,48 @@
     self[@"location"]=location;
 }
 
+#pragma mark -
+- (NSString *)getName
+{
+    return self[@"name"];
+}
+
+- (NSInteger)invitedMembersCount
+{
+    NSArray *members = (NSArray *)self[@"invited"];
+    
+    return [members count];
+}
+
+- (NSInteger)confirmedMembersCount
+{
+    NSArray *members = (NSArray *)self[@"confirmed"];
+    
+    return [members count];
+}
+
+- (AHEventType)getType
+{
+    NSString *type = self[@"type"];
+    if ([type isEqualToString:@"coffee"]) {
+        return AHEventTypeCoffee;
+    }
+    if ([type isEqualToString:@"happyhour"]) {
+        return AHEventTypeHappyHour;
+    }
+    if ([type isEqualToString:@"sports"]) {
+        return AHEventTypeSports;
+    }
+    if ([type isEqualToString:@"meeting"]) {
+        return AHEventTypeMeeting;
+    }
+    if ([type isEqualToString:@"meal"]) {
+        return AHEventTypeMeal;
+    }
+    if ([type isEqualToString:@"birthday"]) {
+        return AHEventTypeBirthday;
+    }
+    return -1;
+}
+
 @end

@@ -32,4 +32,10 @@ typedef NS_ENUM(NSInteger, AHEventType) {
 - (void)setType:(AHEventType)type;
 - (void)setDate:(NSDate *)date;
 - (void)setLocation:(NSString *)location;
+
+- (NSString *)getName;
+- (NSInteger)invitedMembersCount;
+- (NSInteger)confirmedMembersCount;
+- (AHEventType)getType;
+
 @end

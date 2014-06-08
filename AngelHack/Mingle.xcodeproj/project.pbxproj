@@ -12,6 +12,8 @@
 		1A1463E9194453A600614B7C /* AHColoredBorderedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1463E8194453A600614B7C /* AHColoredBorderedView.m */; };
 		1A1463EC194455D200614B7C /* AHColoredPlaceholderTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1463EB194455D200614B7C /* AHColoredPlaceholderTextField.m */; };
 		1A1463EF1944627400614B7C /* AHBorderedColorButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1463EE1944627400614B7C /* AHBorderedColorButton.m */; };
+		1A1463FB19447B7900614B7C /* AHEventInviteTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1463FA19447B7900614B7C /* AHEventInviteTableViewCell.m */; };
+		1A1463FE19447B8600614B7C /* AHMyEventTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1463FD19447B8600614B7C /* AHMyEventTableViewCell.m */; };
 		EA8C83F619437261006793C5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8C83F519437261006793C5 /* Foundation.framework */; };
 		EA8C83F819437261006793C5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8C83F719437261006793C5 /* CoreGraphics.framework */; };
 		EA8C83FA19437261006793C5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8C83F919437261006793C5 /* UIKit.framework */; };
@@ -77,7 +79,11 @@
 		1A1463EB194455D200614B7C /* AHColoredPlaceholderTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHColoredPlaceholderTextField.m; sourceTree = "<group>"; };
 		1A1463ED1944627400614B7C /* AHBorderedColorButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHBorderedColorButton.h; sourceTree = "<group>"; };
 		1A1463EE1944627400614B7C /* AHBorderedColorButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHBorderedColorButton.m; sourceTree = "<group>"; };
-		EA8C83F219437261006793C5 /* AngelHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AngelHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A1463F919447B7900614B7C /* AHEventInviteTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHEventInviteTableViewCell.h; sourceTree = "<group>"; };
+		1A1463FA19447B7900614B7C /* AHEventInviteTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHEventInviteTableViewCell.m; sourceTree = "<group>"; };
+		1A1463FC19447B8600614B7C /* AHMyEventTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHMyEventTableViewCell.h; sourceTree = "<group>"; };
+		1A1463FD19447B8600614B7C /* AHMyEventTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHMyEventTableViewCell.m; sourceTree = "<group>"; };
+		EA8C83F219437261006793C5 /* Mingle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mingle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA8C83F519437261006793C5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EA8C83F719437261006793C5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		EA8C83F919437261006793C5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -208,6 +214,33 @@
 				1A1463EE1944627400614B7C /* AHBorderedColorButton.m */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		1A1463F619447B5100614B7C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				1A1463F819447B6400614B7C /* EventInviteCell */,
+				1A1463F719447B5500614B7C /* MyEventCell */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		1A1463F719447B5500614B7C /* MyEventCell */ = {
+			isa = PBXGroup;
+			children = (
+				1A1463FC19447B8600614B7C /* AHMyEventTableViewCell.h */,
+				1A1463FD19447B8600614B7C /* AHMyEventTableViewCell.m */,
+			);
+			name = MyEventCell;
+			sourceTree = "<group>";
+		};
+		1A1463F819447B6400614B7C /* EventInviteCell */ = {
+			isa = PBXGroup;
+			children = (
+				1A1463F919447B7900614B7C /* AHEventInviteTableViewCell.h */,
+				1A1463FA19447B7900614B7C /* AHEventInviteTableViewCell.m */,
+			);
+			name = EventInviteCell;
 			sourceTree = "<group>";
 		};
 		EA8C83E919437261006793C5 = {
@@ -472,6 +505,7 @@
 		EA9828CA19439BCF004510C5 /* MyEvents */ = {
 			isa = PBXGroup;
 			children = (
+				1A1463F619447B5100614B7C /* Cells */,
 				EA9828F919439E78004510C5 /* AHMyEventsViewController.h */,
 				EA9828FA19439E78004510C5 /* AHMyEventsViewController.m */,
 			);
@@ -649,9 +683,11 @@
 				EA8C840219437261006793C5 /* main.m in Sources */,
 				EA9828FB19439E78004510C5 /* AHMyEventsViewController.m in Sources */,
 				EA9828F819439E47004510C5 /* AHEventInviteViewController.m in Sources */,
+				1A1463FB19447B7900614B7C /* AHEventInviteTableViewCell.m in Sources */,
 				EA8C844D19437AFD006793C5 /* AHEvent.m in Sources */,
 				EA9828FE19439F26004510C5 /* AHSingleEventViewController.m in Sources */,
 				EA9828E219439D55004510C5 /* AHCreateCompanyViewController.m in Sources */,
+				1A1463FE19447B8600614B7C /* AHMyEventTableViewCell.m in Sources */,
 				EAFCCF431943EAC200F34D4F /* AHCompany.m in Sources */,
 				EA9828EF19439DE3004510C5 /* AHSingleBadgeViewController.m in Sources */,
 				EA8C840619437261006793C5 /* AHAppDelegate.m in Sources */,
@@ -798,6 +834,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -807,7 +845,7 @@
 				INFOPLIST_FILE = "AngelHack/Mingle-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = Mingle;
-				PROVISIONING_PROFILE = "98942FEC-F898-4047-B333-A3098F042818";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -817,6 +855,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -826,7 +866,7 @@
 				INFOPLIST_FILE = "AngelHack/Mingle-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = Mingle;
-				PROVISIONING_PROFILE = "98942FEC-F898-4047-B333-A3098F042818";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
