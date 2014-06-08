@@ -22,4 +22,7 @@
 - (void)setName:(NSString *)name;
 - (void)setAdmin:(AHUser *)admin;
 
+- (void)addMember:(AHUser *)user;
+- (void)batchInvite:(NSArray *)emailList;
+
 @end

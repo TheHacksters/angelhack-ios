@@ -59,4 +59,29 @@
     self[@"admin"]=admin;
 }
 
+#pragma mark - Relation Methods
+- (void)addMember:(AHUser *)user
+{
+    [self addObject:user forKey:@"members"];
+    [self save];
+}
+
+- (void)batchInvite:(NSArray *)emailList
+{
+    NSMutableArray *queries = [[NSMutableArray alloc] init];
+    
+    for (NSString *email in emailList) {
+        PFQuery *query = [PFQuery queryWithClassName:@"_User"];
+        [query whereKey:@"email" equalTo:email];
+        [queries addObject:query];
+    }
+    
+    PFQuery *mainQuery = [PFQuery orQueryWithSubqueries:queries];
+    NSArray *users = [mainQuery findObjects];
+    
+    for (AHUser *user in users) {
+        [user addCompany:self];
+    }
+}
+
 @end
