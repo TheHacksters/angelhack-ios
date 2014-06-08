@@ -8,6 +8,15 @@
 
 #import <Parse/Parse.h>
 
+typedef NS_ENUM(NSInteger, AHEventType) {
+    AHEventTypeHappyHour = 0,
+    AHEventTypeSports,
+    AHEventTypeCoffee,
+    AHEventTypeMeal,
+    AHEventTypeMeeting,
+    AHEventTypeBirthday
+};
+
 @interface AHEvent : PFObject <PFSubclassing>
 
 + (NSString *)parseClassName;
