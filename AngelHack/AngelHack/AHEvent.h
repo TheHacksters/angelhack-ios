@@ -21,4 +21,11 @@ typedef NS_ENUM(NSInteger, AHEventType) {
 
 + (NSString *)parseClassName;
 
+- (AHEvent *)initWithName:(NSString *)name Type:(AHEventType)type Date:(NSDate *)date Location:(NSString *)location andCompany:(AHCompany *)company;
+- (void)setCompany:(AHCompany *)company;
+- (void)setName:(NSString *)name;
+- (void)setCreator:(AHUser *)creator;
+- (void)setType:(AHEventType)type;
+- (void)setDate:(NSDate *)date;
+- (void)setLocation:(NSString *)location;
 @end

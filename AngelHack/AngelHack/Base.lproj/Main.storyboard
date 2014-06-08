@@ -33,7 +33,7 @@
                                     <action selector="performLogin:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Afk-EB-8jO"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4an-nA-HEj">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4an-nA-HEj" customClass="AHColoredBorderedView">
                                 <rect key="frame" x="30" y="262" width="261" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -42,31 +42,30 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     </imageView>
-                                    <textField appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Login" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5gJ-lu-39O">
+                                    <textField appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Login" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5gJ-lu-39O" customClass="AHColoredPlaceholderTextField">
                                         <rect key="frame" x="45" y="7" width="196" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="textColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderStringColor">
+                                                <color key="value" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="0.50588238240000005" green="0.67450982329999998" blue="0.77254903320000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="22"/>
-                                    </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                         <integer key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
-                                        <color key="value" red="0.31372549019607843" green="0.54509803921568623" blue="0.29411764705882354" alpha="1" colorSpace="calibratedRGB"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ADn-gz-C33">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ADn-gz-C33" customClass="AHColoredBorderedView">
                                 <rect key="frame" x="30" y="314" width="261" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -75,24 +74,26 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     </imageView>
-                                    <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fsQ-El-51t">
+                                    <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fsQ-El-51t" customClass="AHColoredPlaceholderTextField">
                                         <rect key="frame" x="45" y="7" width="196" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="textColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="go" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderStringColor">
+                                                <color key="value" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="0.50588238240000005" green="0.67450982329999998" blue="0.77254903320000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="22"/>
-                                    </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                         <integer key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
-                                        <color key="value" red="0.31372549020000001" green="0.5450980392" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
@@ -131,7 +132,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-8810" y="-2188"/>
+            <point key="canvasLocation" x="-8050" y="-1324"/>
         </scene>
         <!--Create Company View Controller-->
         <scene sceneID="KCw-mu-4oT">
@@ -312,7 +313,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gIe-s8-fL9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-7144" y="-2514"/>
+            <point key="canvasLocation" x="-6384" y="-1650"/>
         </scene>
         <!--Co Workers List View Controller-->
         <scene sceneID="Md8-hx-4fk">
@@ -338,7 +339,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AxT-wC-LbW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-7569" y="-3084"/>
+            <point key="canvasLocation" x="-6809" y="-2220"/>
         </scene>
         <!--Single Co Worker View Controller-->
         <scene sceneID="R93-ib-6dp">
@@ -428,7 +429,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ap8-MX-jVz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-6777" y="-3084"/>
+            <point key="canvasLocation" x="-6017" y="-2220"/>
         </scene>
         <!--Event Invite View Controller-->
         <scene sceneID="uoG-C6-La4">
@@ -454,7 +455,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lXa-uT-FUE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5465" y="-1830"/>
+            <point key="canvasLocation" x="-4705" y="-966"/>
         </scene>
         <!--Single Event View Controller-->
         <scene sceneID="cky-vA-m3L">
@@ -480,7 +481,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H2i-FH-b20" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5847" y="-1830"/>
+            <point key="canvasLocation" x="-5087" y="-966"/>
         </scene>
         <!--My Companies View Controller-->
         <scene sceneID="3Md-vK-ohG">
@@ -616,7 +617,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kQP-LH-SlQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-7683" y="-1859"/>
+            <point key="canvasLocation" x="-6923" y="-995"/>
         </scene>
         <!--My Events View Controller-->
         <scene sceneID="9PB-gZ-vXd">
@@ -754,7 +755,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SMi-Wz-9Kw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-6605" y="-1859"/>
+            <point key="canvasLocation" x="-5845" y="-995"/>
         </scene>
         <!--Badge List View Controller-->
         <scene sceneID="aTM-mv-cL1">
@@ -780,7 +781,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2iA-A1-O4j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-7369" y="-848"/>
+            <point key="canvasLocation" x="-6609" y="16"/>
         </scene>
         <!--Single Badge View Controller-->
         <scene sceneID="IV2-QY-wMX">
@@ -806,7 +807,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gTX-Mt-15R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-6777" y="-848"/>
+            <point key="canvasLocation" x="-6017" y="16"/>
         </scene>
         <!--Create Event View Controller-->
         <scene sceneID="q5C-cq-RsD">
@@ -926,6 +927,124 @@
                                             </button>
                                         </subviews>
                                     </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2aU-tj-xSY" customClass="AHColoredBorderedView">
+                                        <rect key="frame" x="30" y="181" width="261" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_event_date" translatesAutoresizingMaskIntoConstraints="NO" id="3on-ND-rCX">
+                                                <rect key="frame" x="5" y="5" width="32" height="34"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                            </imageView>
+                                            <textField appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Date/Time" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="54c-kK-mgq" customClass="AHColoredPlaceholderTextField">
+                                                <rect key="frame" x="45" y="7" width="196" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="textColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderStringColor">
+                                                        <color key="value" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                        </subviews>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q1a-fY-3sC" customClass="AHColoredBorderedView">
+                                        <rect key="frame" x="30" y="129" width="261" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_event_location" translatesAutoresizingMaskIntoConstraints="NO" id="bOb-1Q-CTl">
+                                                <rect key="frame" x="5" y="5" width="32" height="34"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                            </imageView>
+                                            <textField appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Location" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F3k-We-L8w" customClass="AHColoredPlaceholderTextField">
+                                                <rect key="frame" x="45" y="7" width="196" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="textColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderStringColor">
+                                                        <color key="value" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                        </subviews>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yDk-ao-5h3" customClass="AHColoredBorderedView">
+                                        <rect key="frame" x="30" y="77" width="261" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_event_name" translatesAutoresizingMaskIntoConstraints="NO" id="8SD-ez-EbP">
+                                                <rect key="frame" x="5" y="5" width="32" height="34"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                            </imageView>
+                                            <textField appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Event Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0fs-wt-iNx" customClass="AHColoredPlaceholderTextField">
+                                                <rect key="frame" x="45" y="7" width="196" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="textColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderStringColor">
+                                                        <color key="value" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                        </subviews>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <button appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="euV-vW-th4" customClass="AHBorderedColorButton">
+                                        <rect key="frame" x="30" y="427" width="261" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-ThinItalic" family="Helvetica Neue" pointSize="18"/>
+                                        <state key="normal" title="Create New Event">
+                                            <color key="titleColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="hasBorder" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="normalStateColor">
+                                                <color key="value" red="0.792156862745098" green="0.61960784313725492" blue="0.28235294117647058" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="createCompany:" destination="xLQ-NO-vye" eventType="touchUpInside" id="K01-YU-Scx"/>
+                                            <action selector="creteNewEvent:" destination="NAT-Bq-TXU" eventType="touchUpInside" id="pi1-cf-XbA"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </view>
                         </subviews>
@@ -935,6 +1054,10 @@
                     <connections>
                         <outlet property="coffeeTabBackground" destination="po8-ma-0ON" id="otd-3V-DZ6"/>
                         <outlet property="coffeeTabButton" destination="SWw-ve-wsI" id="NMy-rj-d67"/>
+                        <outlet property="createNewEventButton" destination="euV-vW-th4" id="XmW-yM-tgQ"/>
+                        <outlet property="eventDateTextField" destination="54c-kK-mgq" id="uqq-uf-g1y"/>
+                        <outlet property="eventLocationTextField" destination="F3k-We-L8w" id="LNL-vJ-g9g"/>
+                        <outlet property="eventNameTextField" destination="0fs-wt-iNx" id="UmT-68-65O"/>
                         <outlet property="happyHourTabBackground" destination="ZPh-zm-4c6" id="5c5-Ro-fbU"/>
                         <outlet property="happyHourTabButton" destination="yWn-q5-IGM" id="9aU-JK-tSr"/>
                         <outlet property="mealTabBackground" destination="KpI-Ng-imm" id="huh-JM-chQ"/>
@@ -948,7 +1071,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3J5-9p-KHk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-6250" y="-1859"/>
+            <point key="canvasLocation" x="-5490" y="-995"/>
         </scene>
         <!--Signup View Controller - Title-->
         <scene sceneID="79s-cO-DVI">
@@ -972,16 +1095,21 @@
                                     <action selector="performSignup:" destination="eUR-Ga-VwB" eventType="touchUpInside" id="cgd-Uc-wEp"/>
                                 </connections>
                             </button>
-                            <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qra-ZN-hUL">
+                            <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qra-ZN-hUL" customClass="AHColoredBorderedView">
                                 <rect key="frame" x="30" y="223" width="261" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jor-rf-Hen">
+                                    <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jor-rf-Hen" customClass="AHColoredPlaceholderTextField">
                                         <rect key="frame" x="45" y="7" width="196" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="textColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderStringColor">
+                                                <color key="value" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_login_user" translatesAutoresizingMaskIntoConstraints="NO" id="kqN-7H-iy6">
                                         <rect key="frame" x="5" y="5" width="32" height="34"/>
@@ -991,27 +1119,29 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.50588238240000005" green="0.67450982329999998" blue="0.77254903320000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="22"/>
-                                    </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                         <integer key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
-                                        <color key="value" red="0.31372549020000001" green="0.5450980392" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vDL-OU-qrC">
+                            <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vDL-OU-qrC" customClass="AHColoredBorderedView">
                                 <rect key="frame" x="30" y="275" width="261" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R6b-xn-ETW">
+                                    <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R6b-xn-ETW" customClass="AHColoredPlaceholderTextField">
                                         <rect key="frame" x="45" y="7" width="196" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="textColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderStringColor">
+                                                <color key="value" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_login_user" translatesAutoresizingMaskIntoConstraints="NO" id="KNp-bC-eLU">
                                         <rect key="frame" x="5" y="5" width="32" height="34"/>
@@ -1021,27 +1151,29 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.50588238240000005" green="0.67450982329999998" blue="0.77254903320000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="22"/>
-                                    </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                         <integer key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
-                                        <color key="value" red="0.31372549020000001" green="0.5450980392" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HO9-iQ-8Zu">
+                            <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HO9-iQ-8Zu" customClass="AHColoredBorderedView">
                                 <rect key="frame" x="30" y="327" width="261" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Birthday" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="goF-mc-TSF">
+                                    <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Birthday" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="goF-mc-TSF" customClass="AHColoredPlaceholderTextField">
                                         <rect key="frame" x="45" y="7" width="196" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="textColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderStringColor">
+                                                <color key="value" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_login_user" translatesAutoresizingMaskIntoConstraints="NO" id="tbg-rD-sFq">
                                         <rect key="frame" x="5" y="5" width="32" height="34"/>
@@ -1051,18 +1183,15 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.50588238240000005" green="0.67450982329999998" blue="0.77254903320000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="22"/>
-                                    </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                         <integer key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
-                                        <color key="value" red="0.31372549020000001" green="0.5450980392" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wyk-IP-6R4">
+                            <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wyk-IP-6R4" customClass="AHColoredBorderedView">
                                 <rect key="frame" x="30" y="379" width="261" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -1071,27 +1200,29 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     </imageView>
-                                    <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d4P-W1-s3c">
+                                    <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d4P-W1-s3c" customClass="AHColoredPlaceholderTextField">
                                         <rect key="frame" x="45" y="7" width="196" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="go" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderStringColor">
+                                                <color key="value" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="0.50588238240000005" green="0.67450982329999998" blue="0.77254903320000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="22"/>
-                                    </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                         <integer key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
-                                        <color key="value" red="0.31372549020000001" green="0.5450980392" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0or-Sq-dlV">
+                            <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0or-Sq-dlV" customClass="AHColoredBorderedView">
                                 <rect key="frame" x="30" y="431" width="261" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -1100,23 +1231,25 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     </imageView>
-                                    <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Retype Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Hp-FV-0Ff">
+                                    <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Retype Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Hp-FV-0Ff" customClass="AHColoredPlaceholderTextField">
                                         <rect key="frame" x="45" y="7" width="196" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="go" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderStringColor">
+                                                <color key="value" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="0.50588238240000005" green="0.67450982329999998" blue="0.77254903320000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="22"/>
-                                    </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                         <integer key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
-                                        <color key="value" red="0.31372549020000001" green="0.5450980392" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
@@ -1168,7 +1301,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wiO-gQ-pce" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-8810" y="-1503"/>
+            <point key="canvasLocation" x="-8050" y="-639"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="sfn-vM-ygb">
@@ -1260,7 +1393,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3zg-ij-Trr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-8173" y="-1036"/>
+            <point key="canvasLocation" x="-7413" y="-172"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QzX-Ks-Q2g">
@@ -1278,7 +1411,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IVA-N1-HHy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-9304" y="-2188"/>
+            <point key="canvasLocation" x="-8544" y="-1324"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lbQ-O4-Z5X">
@@ -1296,7 +1429,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S73-Y1-cpp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-8209" y="-1859"/>
+            <point key="canvasLocation" x="-7449" y="-995"/>
         </scene>
     </scenes>
     <resources>
@@ -1304,6 +1437,9 @@
         <image name="ic_add_photo" width="70" height="70"/>
         <image name="ic_back" width="12" height="22"/>
         <image name="ic_disclosure" width="12" height="22"/>
+        <image name="ic_event_date" width="36" height="36"/>
+        <image name="ic_event_location" width="36" height="36"/>
+        <image name="ic_event_name" width="36" height="36"/>
         <image name="ic_invite_members" width="46" height="46"/>
         <image name="ic_login_password" width="24" height="26"/>
         <image name="ic_login_user" width="24" height="26"/>
@@ -1328,8 +1464,8 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="xq3-u4-OGy"/>
+        <segue reference="ulF-cm-f4k"/>
         <segue reference="Zaw-dN-qex"/>
-        <segue reference="ff3-HH-nVU"/>
-        <segue reference="zxc-RL-Zuh"/>
     </inferredMetricsTieBreakers>
 </document>

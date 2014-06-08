@@ -8,6 +8,7 @@
 
 #import "AHCreateEventViewController.h"
 #import "AHEvent.h"
+#import "AHBorderedColorButton.h"
 
 @interface AHCreateEventViewController ()
 
@@ -28,6 +29,15 @@
 @property (weak, nonatomic) IBOutlet UIButton *mealTabButton;
 @property (weak, nonatomic) IBOutlet UIButton *meetingTabButton;
 
+// Text Fields
+@property (weak, nonatomic) IBOutlet UITextField *eventNameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *eventLocationTextField;
+@property (weak, nonatomic) IBOutlet UITextField *eventDateTextField;
+
+// Create Button
+@property (weak, nonatomic) IBOutlet AHBorderedColorButton *createNewEventButton;
+
+
 @end
 
 @implementation AHCreateEventViewController
@@ -46,6 +56,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
+    [self.view addGestureRecognizer:gestureRecognizer];
+    
     self.selectedEventType = AHEventTypeHappyHour;
 }
 
@@ -59,22 +72,41 @@
 - (IBAction)happyHourTab:(id)sender {
     [self.tabBackgrounds bringSubviewToFront:self.happyHourTabBackground];
     self.selectedEventType = AHEventTypeHappyHour;
+    self.createNewEventButton.normalStateColor = [UIColor colorWithRed:202.0f/255.0f green:158.0f/255.0f blue:72.0f/255.0f alpha:1.0f];
 }
 - (IBAction)sportsTab:(id)sender {
     [self.tabBackgrounds bringSubviewToFront:self.sportsTabBackground];
     self.selectedEventType = AHEventTypeSports;
+    self.createNewEventButton.normalStateColor = [UIColor colorWithRed:61.0f/255.0f green:156.0f/255.0f blue:85.0f/255.0f alpha:1.0f];
 }
 - (IBAction)coffeeTab:(id)sender {
     [self.tabBackgrounds bringSubviewToFront:self.coffeeTabBackground];
     self.selectedEventType = AHEventTypeCoffee;
+    self.createNewEventButton.normalStateColor = [UIColor colorWithRed:84.0f/255.0f green:45.0f/255.0f blue:23.0f/255.0f alpha:1.0f];
 }
 - (IBAction)mealTab:(id)sender {
     [self.tabBackgrounds bringSubviewToFront:self.mealTabBackground];
     self.selectedEventType = AHEventTypeMeal;
+    self.createNewEventButton.normalStateColor = [UIColor colorWithRed:136.0f/255.0f green:84.0f/255.0f blue:173.0f/255.0f alpha:1.0f];
 }
 - (IBAction)meetingTab:(id)sender {
     [self.tabBackgrounds bringSubviewToFront:self.meetingTabBackground];
     self.selectedEventType = AHEventTypeMeeting;
+    self.createNewEventButton.normalStateColor = [UIColor colorWithRed:56.0f/255.0f green:115.0f/255.0f blue:143.0f/255.0f alpha:1.0f];
+}
+
+#pragma mark - Create New Event
+
+- (IBAction)creteNewEvent:(id)sender {
+}
+
+#pragma mark - Keyboard Dismissal
+
+-(void)dismissKeyboard
+{
+    [self.eventNameTextField resignFirstResponder];
+    [self.eventLocationTextField resignFirstResponder];
+    [self.eventDateTextField resignFirstResponder];
 }
 
 #pragma mark - Status Bar Style

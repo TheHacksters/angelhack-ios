@@ -45,20 +45,6 @@
     UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
     [self.view addGestureRecognizer:gestureRecognizer];
     
-    //Change Placeholder Font Color
-    self.emailField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Email" attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
-    self.nameField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Name" attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
-    self.bdayField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Birthday" attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
-    self.pwdField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Password" attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
-    self.rpwdField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Retype Password" attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
-    
-    // Setting Textfield Border Color
-    self.emailContainerView.layer.borderColor = [UIColor colorWithRed:0.980392f green:0.980392f blue:0.980392f alpha:1.0f].CGColor;
-    self.nameContainerView.layer.borderColor = [UIColor colorWithRed:0.980392f green:0.980392f blue:0.980392f alpha:0.980392f].CGColor;
-    self.bdayContainerView.layer.borderColor = [UIColor colorWithRed:0.980392f green:0.980392f blue:0.980392f alpha:0.980392f].CGColor;
-    self.pwdContainerView.layer.borderColor = [UIColor colorWithRed:0.980392f green:0.980392f blue:0.980392f alpha:0.980392f].CGColor;
-    self.rpwdContainerView.layer.borderColor = [UIColor colorWithRed:0.980392f green:0.980392f blue:0.980392f alpha:0.980392f].CGColor;
-    
     // Setting Login Button State Color
     UIView *greenBackgroundView = [[UIView alloc] initWithFrame:self.createButton.frame];
     greenBackgroundView.backgroundColor = [UIColor colorWithRed:0.384313725f green:0.6745098f blue:0.3607843f alpha:1.0f];
