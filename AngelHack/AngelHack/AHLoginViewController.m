@@ -61,7 +61,6 @@
     
     [self.loginButton setBackgroundImage:greenBackground forState:UIControlStateNormal];
     [self.signupButton setBackgroundImage:blueBackground forState:UIControlStateNormal];
-    
 }
 
 - (void)viewDidAppear:(BOOL)animated

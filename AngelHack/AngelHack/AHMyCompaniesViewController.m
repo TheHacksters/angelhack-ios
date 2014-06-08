@@ -44,7 +44,21 @@
     // Parse Objects
     self.user = (AHUser *)[PFUser currentUser];
 
-    self.companies = [self.user getCompanies];
+//    self.companies = [self.user getCompanies];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self refreshData];
+}
+
+- (void)refreshData
+{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        self.companies = [self.user getCompanies];
+        [self.tableView reloadData];
+    });
 }
 
 - (void)didReceiveMemoryWarning
