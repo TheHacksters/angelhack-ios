@@ -115,7 +115,7 @@
                                     <segue destination="eUR-Ga-VwB" kind="push" id="ODR-RS-M2J"/>
                                 </connections>
                             </button>
-                            <imageView appearanceType="aqua" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XY3-Mr-wzl">
+                            <imageView appearanceType="aqua" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="img-logo" translatesAutoresizingMaskIntoConstraints="NO" id="XY3-Mr-wzl">
                                 <rect key="frame" x="40" y="77" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -1599,7 +1599,7 @@
                                     <action selector="dismissSignup:" destination="eUR-Ga-VwB" eventType="touchUpInside" id="XjV-dp-Ptx"/>
                                 </connections>
                             </button>
-                            <imageView appearanceType="aqua" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XpC-xX-dvB">
+                            <imageView appearanceType="aqua" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="img-logo" translatesAutoresizingMaskIntoConstraints="NO" id="XpC-xX-dvB">
                                 <rect key="frame" x="40" y="70" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -1833,6 +1833,7 @@
         <image name="ic_small_sport" width="28" height="28"/>
         <image name="ic_users" width="30" height="24"/>
         <image name="img-input-line" width="216" height="10"/>
+        <image name="img-logo" width="480" height="256"/>
         <image name="img_backtab_coffee" width="320" height="486"/>
         <image name="img_backtab_happy" width="320" height="486"/>
         <image name="img_backtab_meal" width="320" height="486"/>
@@ -1860,6 +1861,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="ulF-cm-f4k"/>
         <segue reference="zxc-RL-Zuh"/>
-        <segue reference="kZG-C4-QaU"/>
+        <segue reference="Zaw-dN-qex"/>
     </inferredMetricsTieBreakers>
 </document>
