@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="xLQ-NO-vye">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="SR9-YX-BFz">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -123,7 +123,7 @@
                         <outlet property="pwdField" destination="fsQ-El-51t" id="hf2-Uw-oW4"/>
                         <outlet property="signupButton" destination="Q8H-hp-SIN" id="pa1-Us-0SB"/>
                         <outlet property="usrField" destination="5gJ-lu-39O" id="tGo-4O-yMq"/>
-                        <segue destination="dPO-eI-L7m" kind="modal" identifier="successLogin" id="ff3-HH-nVU"/>
+                        <segue destination="2Qo-64-baG" kind="modal" identifier="successLogin" id="ff3-HH-nVU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -154,6 +154,9 @@
                                     <navigationItem title="New Company" id="naL-FF-eEa">
                                         <barButtonItem key="leftBarButtonItem" image="ic_back" id="MCn-lu-T1r">
                                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                                            <connections>
+                                                <action selector="popViewController:" destination="xLQ-NO-vye" id="sfm-ar-hr9"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -290,6 +293,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.50588235294117645" green="0.67450980392156867" blue="0.77254901960784317" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="gu7-ZZ-vW8"/>
                     <connections>
                         <outlet property="companyContainerView" destination="uK8-3p-70h" id="WyM-YG-Uy8"/>
                         <outlet property="companyField" destination="4vv-5Z-3IP" id="5Ov-a2-wdE"/>
@@ -301,7 +305,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gIe-s8-fL9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-7861" y="-2748"/>
+            <point key="canvasLocation" x="-7227" y="-1859"/>
         </scene>
         <!--Co Workers List View Controller-->
         <scene sceneID="Md8-hx-4fk">
@@ -379,7 +383,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lXa-uT-FUE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5627" y="-1894"/>
+            <point key="canvasLocation" x="-5101" y="-1894"/>
         </scene>
         <!--Single Event View Controller-->
         <scene sceneID="cky-vA-m3L">
@@ -405,7 +409,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H2i-FH-b20" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-6251" y="-2188"/>
+            <point key="canvasLocation" x="-5725" y="-2188"/>
         </scene>
         <!--Invite Member View Controller-->
         <scene sceneID="8CX-CQ-8tJ">
@@ -512,7 +516,7 @@
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VPi-xP-jo3">
                                                     <rect key="frame" x="276" y="10" width="44" height="44"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" image="ic_back">
+                                                    <state key="normal" image="ic_disclosure">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                 </button>
@@ -529,16 +533,35 @@
                                 </prototypes>
                                 <sections/>
                             </tableView>
+                            <button appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YC9-Vv-ZLa">
+                                <rect key="frame" x="30" y="504" width="261" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.31372549020000001" green="0.45882352939999999" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-ThinItalic" family="Helvetica Neue" pointSize="18"/>
+                                <state key="normal" title="Create Company">
+                                    <color key="titleColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="22"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="xLQ-NO-vye" kind="push" id="FEV-08-3UF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.5058823823928833" green="0.67450982332229614" blue="0.77254903316497803" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="ScD-JF-IEh"/>
                     <connections>
                         <outlet property="tableView" destination="s2n-3m-KEt" id="dCs-Pf-Vik"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kQP-LH-SlQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-7637" y="-1887"/>
+            <point key="canvasLocation" x="-7683" y="-1859"/>
         </scene>
         <!--My Events View Controller-->
         <scene sceneID="9PB-gZ-vXd">
@@ -564,7 +587,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SMi-Wz-9Kw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-6943" y="-1887"/>
+            <point key="canvasLocation" x="-6417" y="-1887"/>
         </scene>
         <!--Badge List View Controller-->
         <scene sceneID="aTM-mv-cL1">
@@ -642,7 +665,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3J5-9p-KHk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-6777" y="-1380"/>
+            <point key="canvasLocation" x="-6251" y="-1380"/>
         </scene>
         <!--Signup View Controller - Title-->
         <scene sceneID="79s-cO-DVI">
@@ -857,7 +880,7 @@
                         <outlet property="pwdField" destination="d4P-W1-s3c" id="MwP-i9-ENJ"/>
                         <outlet property="rpwdContainerView" destination="0or-Sq-dlV" id="I3a-11-G0o"/>
                         <outlet property="rpwdField" destination="1Hp-FV-0Ff" id="3mn-gw-O4r"/>
-                        <segue destination="dPO-eI-L7m" kind="modal" identifier="successSignup" id="ulF-cm-f4k"/>
+                        <segue destination="2Qo-64-baG" kind="modal" identifier="successSignup" id="ulF-cm-f4k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wiO-gQ-pce" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -908,11 +931,30 @@
             </objects>
             <point key="canvasLocation" x="-9304" y="-2188"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lbQ-O4-Z5X">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="2Qo-64-baG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EQl-wL-iIG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dPO-eI-L7m" kind="relationship" relationship="rootViewController" id="8eZ-S1-vi9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S73-Y1-cpp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-8209" y="-1859"/>
+        </scene>
     </scenes>
     <resources>
         <image name="ic-less" width="30" height="30"/>
         <image name="ic_add_photo" width="70" height="70"/>
         <image name="ic_back" width="12" height="22"/>
+        <image name="ic_disclosure" width="12" height="22"/>
         <image name="ic_invite_members" width="46" height="46"/>
         <image name="ic_login_password" width="24" height="26"/>
         <image name="ic_login_user" width="24" height="26"/>
@@ -927,6 +969,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="ff3-HH-nVU"/>
+        <segue reference="ulF-cm-f4k"/>
     </inferredMetricsTieBreakers>
 </document>

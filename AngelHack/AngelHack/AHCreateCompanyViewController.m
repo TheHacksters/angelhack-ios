@@ -150,4 +150,17 @@
     
 }
 
+#pragma mark - Status Bar Style
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
+
+#pragma mark - Dismiss Signup
+- (IBAction)popViewController:(id)sender
+{
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
+
 @end
