@@ -8,9 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@class AFCompany;
+@protocol AHCompanyTableCellDelegate <NSObject>
+@optional
+- (void)companyTableCellDisclosureButtonTouchedAtIndexPath:(NSIndexPath *)indexPath;
+@end
 
 @interface AHCompanyTableViewCell : UITableViewCell
+
+@property (weak, nonatomic) id<AHCompanyTableCellDelegate>delegate;
 
 @property (weak, nonatomic) IBOutlet UILabel *name;
 @property (weak, nonatomic) IBOutlet UILabel *numberOfUsers;
@@ -18,6 +23,6 @@
 
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *imageActivityIndicator;
 
-@property (weak, nonatomic) AFCompany *company;
+@property (strong, nonatomic) NSIndexPath *indexPath;
 
 @end

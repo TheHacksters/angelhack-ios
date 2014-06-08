@@ -590,6 +590,9 @@
                                                     <state key="normal" image="ic_disclosure">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="disclosureButtonAction:" destination="H06-dU-WlI" eventType="touchUpInside" id="Vud-pv-UMj"/>
+                                                    </connections>
                                                 </button>
                                                 <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="fT7-FF-6kO">
                                                     <rect key="frame" x="14" y="13" width="37" height="37"/>

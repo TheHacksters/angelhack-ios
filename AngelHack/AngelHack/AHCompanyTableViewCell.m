@@ -41,4 +41,11 @@
     // Configure the view for the selected state
 }
 
+- (IBAction)disclosureButtonAction:(id)sender {
+    if ([self.delegate respondsToSelector:@selector(companyTableCellDisclosureButtonTouchedAtIndexPath:)]) {
+        [self.delegate companyTableCellDisclosureButtonTouchedAtIndexPath:self.indexPath];
+    }
+}
+
+
 @end

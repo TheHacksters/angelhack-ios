@@ -8,8 +8,9 @@
 
 #import "AHMyCompaniesViewController.h"
 #import "AHCompanyTableViewCell.h"
+#import "AHMyEventsViewController.h"
 
-@interface AHMyCompaniesViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface AHMyCompaniesViewController () <UITableViewDataSource, UITableViewDelegate, AHCompanyTableCellDelegate>
 
 @property (strong, nonatomic) AHUser *user;
 @property (strong, nonatomic) NSArray *companies;
@@ -56,8 +57,11 @@
 - (void)refreshData
 {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        self.companies = [self.user getCompanies];
-        [self.tableView reloadData];
+        NSArray *companies = [self.user getCompanies];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.companies = companies;
+            [self.tableView reloadData];
+        });
     });
 }
 
@@ -99,7 +103,8 @@
     }
     
     cell.name.text = [company getName];
-    cell.numberOfUsers.text = [NSString stringWithFormat:@"%d", [company memberCount] ];
+    cell.numberOfUsers.text = [NSString stringWithFormat:@"%d", [company memberCount]];
+    cell.indexPath = indexPath;
     
     return cell;
 }
@@ -107,12 +112,20 @@
 #pragma mark - UITableView Delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"INDEX PATH: %d", indexPath.row);
+    [self selectCompanyAtIndexPath:indexPath];
 }
 
-- (IBAction)logout:(id)sender {
-    [PFUser logOut];
-    [self dismissViewControllerAnimated:YES completion:nil];
+#pragma mark - AHCompanyTableCell Delegate
+- (void)companyTableCellDisclosureButtonTouchedAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self selectCompanyAtIndexPath:indexPath];
+}
+
+#pragma mark - Navigation
+- (void)selectCompanyAtIndexPath:(NSIndexPath *)indexPath
+{
+    self.user.selectedCompany = [self.companies objectAtIndex:indexPath.row];
+    [self performSegueWithIdentifier:@"pushCompanyEventsSegue" sender:self];
 }
 
 #pragma mark - UITableView Delegate
