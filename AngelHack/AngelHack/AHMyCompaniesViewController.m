@@ -42,10 +42,10 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
+    
     // Parse Objects
     self.user = (AHUser *)[PFUser currentUser];
-    
-    
+
     NSArray *companyPointers = [self.user getCompanies];
     self.numberOfCompanies = [companyPointers count];
     
@@ -53,14 +53,14 @@
     
     [query includeKey:@"companies"];
     
-    [self.activityIndicator startAnimating];
+//    [self.activityIndicator startAnimating];
     [query getObjectInBackgroundWithId:self.user.objectId block:^(PFObject *object, NSError *error) {
         if (error) {
             NSLog(@"ERROR: %@", error);
         } else {
             self.companies = [object valueForKey:@"companies"];
             self.companiesFetched = YES;
-            [self.activityIndicator stopAnimating];
+//            [self.activityIndicator stopAnimating];
             [self.tableView reloadData];
         }
     }];

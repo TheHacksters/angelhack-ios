@@ -7,8 +7,13 @@
 //
 
 #import "AHProfileViewController.h"
+#import "AHModels.h"
 
 @interface AHProfileViewController ()
+
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *emailLabel;
+@property (weak, nonatomic) IBOutlet UILabel *bdayLabel;
 
 @end
 
@@ -26,7 +31,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    AHUser *me = [AHUser currentUser];
+    self.nameLabel.text = [me getName];
+    self.emailLabel.text = [me getEmail];
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateStyle:NSDateFormatterLongStyle];
+    [formatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"pt_BR"]];
+    
+    self.bdayLabel.text = [NSString stringWithFormat:@"%@",[formatter stringFromDate:[me getBirthday]]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,15 +49,11 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+#pragma mark - Logout Handler
+- (IBAction)performLogout:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    [AHUser logOut];
+    [self performSegueWithIdentifier:@"successLogout" sender:self];
 }
-*/
 
 @end

@@ -7,8 +7,14 @@
 //
 
 #import "AHSingleCoWorkerViewController.h"
+#import "AHModels.h"
 
 @interface AHSingleCoWorkerViewController ()
+
+@property (weak, nonatomic) IBOutlet UILabel *nomeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *emailLabel;
+@property (weak, nonatomic) IBOutlet UILabel *bdayLabel;
+@property (weak, nonatomic) IBOutlet UILabel *companyLabel;
 
 @end
 

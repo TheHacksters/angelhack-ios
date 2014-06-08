@@ -32,11 +32,7 @@
     } else {
         [self addObject:company forKey:@"companies"];
     }
-
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        [self save];
-    });
-     
+    
 //    [self saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
 //        if (!succeeded) {
 //            NSLog(@"ERROR");
@@ -46,10 +42,11 @@
 //    }];
 }
 
-- (NSMutableArray *)getCompanies
+- (NSArray *)getCompanies
 {
-    [self fetchIfNeeded];
-    return self[@"companies"];
+    PFQuery *query = [PFQuery queryWithClassName:@"Company"];
+    [query whereKey:@"members" equalTo:self];
+    return [query findObjects];
 }
 
 #pragma mark - Getters
