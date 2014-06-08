@@ -37,7 +37,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
     UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
     [self.view addGestureRecognizer:gestureRecognizer];
     
@@ -62,6 +62,17 @@
     [self.loginButton setBackgroundImage:greenBackground forState:UIControlStateNormal];
     [self.signupButton setBackgroundImage:blueBackground forState:UIControlStateNormal];
     
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    BOOL userAuthenticated = [[PFUser currentUser] isAuthenticated];
+    
+    if (userAuthenticated) {
+        [self performSegueWithIdentifier:@"successLogin" sender:self];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -94,7 +105,7 @@
         return;
     }
     
-    [AHUser logInWithUsernameInBackground:self.usrField.text password:self.pwdField.text block:^(PFUser *    user, NSError *error) {
+    [AHUser logInWithUsernameInBackground:self.usrField.text password:self.pwdField.text block:^(PFUser *user, NSError *error) {
         if (error) {
             NSLog(@"ERROR: %@", error);
             UIAlertView *alert = [[UIAlertView alloc] init];
