@@ -37,5 +37,6 @@ typedef NS_ENUM(NSInteger, AHEventType) {
 - (NSInteger)invitedMembersCount;
 - (NSInteger)confirmedMembersCount;
 - (AHEventType)getType;
+- (NSString *)getDateString;
 
 @end

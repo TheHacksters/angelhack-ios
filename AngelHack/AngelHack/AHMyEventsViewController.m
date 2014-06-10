@@ -164,6 +164,7 @@
         cell.indexPath = indexPath;
         cell.delegate = self;
         cell.type = [event getType];
+        cell.date.text = [event getDateString];
         return cell;
     }
 }

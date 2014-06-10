@@ -137,4 +137,18 @@
     return -1;
 }
 
+- (NSString *)getDateString
+{
+    NSDate *date = self[@"date"];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"HH:mm"];
+    
+    //Optionally for time zone converstions
+    //[formatter setTimeZone:[NSTimeZone timeZoneWithName:@"BRT"]];
+    
+    NSString *dateString = [formatter stringFromDate:date];
+    
+    return dateString;
+}
+
 @end
