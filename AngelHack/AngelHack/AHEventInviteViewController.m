@@ -129,6 +129,7 @@
 - (IBAction)doneInviteCoworkers:(id)sender
 {
     [self.delegate usersArray:self.emails];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark - Support Methods

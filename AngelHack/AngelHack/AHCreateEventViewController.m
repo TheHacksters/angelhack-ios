@@ -124,9 +124,10 @@
     
     NSLog(@"DATE %@", date);
     
-    AHCompany *stepCompany = [[AHCompany alloc] init];
     
-    AHEvent *newEvent = [[AHEvent alloc] initWithName:self.eventNameTextField.text Type:self.selectedEventType Date:date Location:self.eventLocationTextField.text andCompany: stepCompany];
+    AHEvent *newEvent = [[AHEvent alloc] initWithName:self.eventNameTextField.text Type:self.selectedEventType Date:date Location:self.eventLocationTextField.text andCompany:[AHUser currentUser].selectedCompany];
+    
+    
 }
 
 #pragma mark - Keyboard Dismissal
@@ -149,7 +150,7 @@
 #pragma mark - Cancel Event Creation
 - (IBAction)popViewController:(id)sender
 {
-    [self.navigationController popToRootViewControllerAnimated:YES];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

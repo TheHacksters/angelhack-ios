@@ -12,7 +12,9 @@
 #import "AHEvent.h"
 #import "AHUser.h"
 
-@interface AHMyEventsViewController () <UITableViewDataSource, UITableViewDelegate, AHEventCellTableCellDelegate, AHEventInviteTableCellDelegate>
+@interface AHMyEventsViewController () <UITableViewDataSource, UITableViewDelegate, AHEventCellTableCellDelegate, AHEventInviteTableCellDelegate> {
+    BOOL _firsFetchRetruned;
+}
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
@@ -22,6 +24,8 @@
 @property (strong, nonatomic) AHUser *user;
 
 @property (weak, nonatomic) IBOutlet UINavigationBar *navBar;
+@property (weak, nonatomic) IBOutlet UINavigationItem *navItem;
+
 
 @end
 
@@ -51,9 +55,7 @@
     self.eventInvitations = @[];
     
     NSString *title = [self.user.selectedCompany getName];
-    self.title = title;
-    self.navigationItem.title = title;
-    self.navigationController.navigationItem.title = title;
+    self.navItem.title = title;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -64,25 +66,53 @@
 
 - (void)refreshData
 {
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        PFQuery *query = [PFQuery queryWithClassName:@"Event"];
-        [query whereKey:@"company" equalTo:self.user.selectedCompany];
-        [query whereKey:@"invited" equalTo:self.user];
-        NSArray *invitedEvents = [query findObjects];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            self.eventInvitations = invitedEvents;
-            [self.tableView reloadData];
-        });
-        query = [PFQuery queryWithClassName:@"Event"];
-        [query whereKey:@"company" equalTo:self.user.selectedCompany];
-        [query whereKey:@"confirmed" equalTo:self.user];
-        NSArray *events = [query findObjects];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            self.events = events;
-            [self.tableView reloadData];
-        });
-    });
+    _firsFetchRetruned = NO;
+    PFQuery *invitesQuery = [PFQuery queryWithClassName:@"Event"];
+    [invitesQuery whereKey:@"company" equalTo:self.user.selectedCompany];
+    [invitesQuery whereKey:@"invited" equalTo:self.user];
+    [invitesQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        self.eventInvitations = objects;
+        [self reloadIfDataFetched];
+        _firsFetchRetruned = YES;
+    }];
+    
+    PFQuery *eventsQuery = [PFQuery queryWithClassName:@"Event"];
+    [eventsQuery whereKey:@"company" equalTo:self.user.selectedCompany];
+    [eventsQuery whereKey:@"confirmed" equalTo:self.user];
+    [eventsQuery orderByAscending:@"date"];
+    [eventsQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        self.events = objects;
+        [self reloadIfDataFetched];
+        _firsFetchRetruned = YES;
+    }];
 }
+
+- (void)reloadIfDataFetched
+{
+    if (_firsFetchRetruned) {
+        [self.tableView reloadData];
+    }
+}
+
+//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//        PFQuery *query = [PFQuery queryWithClassName:@"Event"];
+//        [query whereKey:@"company" equalTo:self.user.selectedCompany];
+//        [query whereKey:@"invited" equalTo:self.user];
+//        NSArray *invitedEvents = [query findObjects];
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            self.eventInvitations = invitedEvents;
+//            [self.tableView reloadData];
+//        });
+//        query = [PFQuery queryWithClassName:@"Event"];
+//        [query whereKey:@"company" equalTo:self.user.selectedCompany];
+//        [query whereKey:@"confirmed" equalTo:self.user];
+//        NSArray *events = [query findObjects];
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            self.events = events;
+//            [self.tableView reloadData];
+//        });
+//    });
+//}
 
 - (void)didReceiveMemoryWarning
 {
@@ -135,6 +165,15 @@
         cell.delegate = self;
         cell.type = [event getType];
         return cell;
+    }
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    if (section == 0) {
+        return @"New Events";
+    } else {
+        return @"My Events";
     }
 }
 
