@@ -19,6 +19,7 @@
 
 - (void)addCompany:(AHCompany *)company;
 - (NSMutableArray *)getCompanies;
+- (NSInteger)companiesCount;
 
 - (NSString *)getObjectId;
 - (NSString *)getName;

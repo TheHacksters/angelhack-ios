@@ -40,6 +40,14 @@
     return [query findObjects];
 }
 
+- (NSInteger)companiesCount
+{
+    PFQuery *query = [PFQuery queryWithClassName:@"Company"];
+    [query whereKey:@"members" equalTo:self];
+    NSInteger queryCount = [query countObjects];
+    return queryCount;
+}
+
 #pragma mark - Getters
 - (NSString *)getObjectId
 {

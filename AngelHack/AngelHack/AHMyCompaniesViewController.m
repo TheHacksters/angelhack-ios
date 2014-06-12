@@ -43,9 +43,9 @@
     
     
     // Parse Objects
-    self.user = (AHUser *)[PFUser currentUser];
+    self.user = [AHUser currentUser];
 
-//    self.companies = [self.user getCompanies];
+    self.companies = @[];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -71,21 +71,10 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 #pragma mark - UITableView DataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [[self.user getCompanies] count];
+    return [self.companies count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -103,7 +92,7 @@
     }
     
     cell.name.text = [company getName];
-    cell.numberOfUsers.text = [NSString stringWithFormat:@"%ld", [company memberCount]];
+    cell.numberOfUsers.text = [NSString stringWithFormat:@"%d", [company memberCount]];
     cell.indexPath = indexPath;
     
     if (company[@"image"]) {
