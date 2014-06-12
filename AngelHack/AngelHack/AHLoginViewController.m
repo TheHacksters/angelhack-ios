@@ -42,26 +42,13 @@
     
     UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
     [self.view addGestureRecognizer:gestureRecognizer];
-    
-    // Setting Login Button State Color
-    UIView *greenBackgroundView = [[UIView alloc] initWithFrame:self.loginButton.frame];
-    greenBackgroundView.backgroundColor = [UIColor colorWithRed:0.384313725f green:0.6745098f blue:0.3607843f alpha:1.0f];
-    UIImage *greenBackground = [AHUtils imageFromView:greenBackgroundView];
-    // Setting Signup Button State Color
-    UIView *blueBackgroundView = [[UIView alloc] initWithFrame:self.signupButton.frame];
-    blueBackgroundView.backgroundColor = [UIColor colorWithRed:0.41960784f green:0.5725490f blue:0.666666667f alpha:1.0f];
-    
-    UIImage *blueBackground = [AHUtils imageFromView:blueBackgroundView];
-    
-    [self.loginButton setBackgroundImage:greenBackground forState:UIControlStateNormal];
-    [self.signupButton setBackgroundImage:blueBackground forState:UIControlStateNormal];
 }
 
-- (void)viewDidAppear:(BOOL)animated
+- (void)viewWillAppear:(BOOL)animated
 {
-    [super viewDidAppear:animated];
+    [super viewWillAppear:animated];
     
-    BOOL userAuthenticated = [[PFUser currentUser] isAuthenticated];
+    BOOL userAuthenticated = [[AHUser currentUser] isAuthenticated];
     
     if (userAuthenticated) {
         [self performSegueWithIdentifier:@"successLogin" sender:self];

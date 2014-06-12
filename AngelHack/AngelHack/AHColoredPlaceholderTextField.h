@@ -11,5 +11,7 @@
 @interface AHColoredPlaceholderTextField : UITextField
 
 @property (strong, nonatomic) UIColor *placeholderStringColor;
+@property (strong, nonatomic) NSString *placeholderFontName;
+@property (assign, nonatomic) CGFloat placeholderFontSize;
 
 @end

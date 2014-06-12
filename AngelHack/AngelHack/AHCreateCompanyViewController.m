@@ -48,22 +48,6 @@
     self.emails = [[NSMutableArray alloc] init];
     self.emailTableView.delegate = self;
     self.emailTableView.dataSource = self;
-    
-    self.emailTableView.backgroundColor = [UIColor clearColor];
-
-    //Change Placeholder Font Color
-    self.companyField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Company Name" attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
-    self.emailField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Email" attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
-    
-    // Setting Textfield Border Color
-    self.companyContainerView.layer.borderColor = [UIColor colorWithRed:0.980392f green:0.980392f blue:0.980392f alpha:1.0f].CGColor;
-    self.emailContainerView.layer.borderColor = [UIColor colorWithRed:0.980392f green:0.980392f blue:0.980392f alpha:0.980392f].CGColor;
-    
-    // Setting Signup Button State Color
-    UIView *blueBackgroundView = [[UIView alloc] initWithFrame:self.createButton.frame];
-    blueBackgroundView.backgroundColor = [UIColor colorWithRed:0.41960784f green:0.5725490f blue:0.666666667f alpha:1.0f];
-    UIImage *blueBackground = [AHUtils imageFromView:blueBackgroundView];
-    [self.createButton setBackgroundImage:blueBackground forState:UIControlStateNormal];
 
     self.emailTableView.sectionFooterHeight = 0.0f;
 }

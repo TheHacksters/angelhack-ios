@@ -24,12 +24,21 @@
 {
     [super awakeFromNib];
     [self setPlaceholderColor];
+    if (self.placeholderFontName && self.placeholderFontSize) {
+        [self setPlaceholderFont];
+    }
 }
 
 - (void)setPlaceholderColor
 {
     NSString *placeholder = self.attributedPlaceholder.string;
+    
     self.attributedPlaceholder = [[NSAttributedString alloc] initWithString:placeholder attributes:@{NSForegroundColorAttributeName:self.placeholderStringColor}];
+}
+
+- (void)setPlaceholderFont
+{
+    [self setValue:[UIFont fontWithName:self.placeholderFontName size:self.placeholderFontSize] forKeyPath:@"_placeholderLabel.font"];
 }
 
 @end

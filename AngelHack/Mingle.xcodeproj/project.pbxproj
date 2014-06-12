@@ -14,6 +14,7 @@
 		1A1463EF1944627400614B7C /* AHBorderedColorButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1463EE1944627400614B7C /* AHBorderedColorButton.m */; };
 		1A1463FB19447B7900614B7C /* AHEventInviteTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1463FA19447B7900614B7C /* AHEventInviteTableViewCell.m */; };
 		1A1463FE19447B8600614B7C /* AHMyEventTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1463FD19447B8600614B7C /* AHMyEventTableViewCell.m */; };
+		1ADC025A194A4F8600FBF75E /* AHCustomTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADC0259194A4F8600FBF75E /* AHCustomTextField.m */; };
 		EA8C83F619437261006793C5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8C83F519437261006793C5 /* Foundation.framework */; };
 		EA8C83F819437261006793C5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8C83F719437261006793C5 /* CoreGraphics.framework */; };
 		EA8C83FA19437261006793C5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8C83F919437261006793C5 /* UIKit.framework */; };
@@ -80,6 +81,8 @@
 		1A1463FA19447B7900614B7C /* AHEventInviteTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHEventInviteTableViewCell.m; sourceTree = "<group>"; };
 		1A1463FC19447B8600614B7C /* AHMyEventTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHMyEventTableViewCell.h; sourceTree = "<group>"; };
 		1A1463FD19447B8600614B7C /* AHMyEventTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHMyEventTableViewCell.m; sourceTree = "<group>"; };
+		1ADC0258194A4F8600FBF75E /* AHCustomTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHCustomTextField.h; sourceTree = "<group>"; };
+		1ADC0259194A4F8600FBF75E /* AHCustomTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHCustomTextField.m; sourceTree = "<group>"; };
 		EA8C83F219437261006793C5 /* Mingle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mingle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA8C83F519437261006793C5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EA8C83F719437261006793C5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -197,12 +200,10 @@
 		1A1463E61944533700614B7C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1A1463E7194453A600614B7C /* AHColoredBorderedView.h */,
-				1A1463E8194453A600614B7C /* AHColoredBorderedView.m */,
-				1A1463EA194455D200614B7C /* AHColoredPlaceholderTextField.h */,
-				1A1463EB194455D200614B7C /* AHColoredPlaceholderTextField.m */,
-				1A1463ED1944627400614B7C /* AHBorderedColorButton.h */,
-				1A1463EE1944627400614B7C /* AHBorderedColorButton.m */,
+				1ADC0257194A4E8500FBF75E /* CustomElemetns */,
+				1ADC0254194A4A3F00FBF75E /* Views */,
+				1ADC0253194A4A3A00FBF75E /* TextFields */,
+				1ADC0252194A4A1700FBF75E /* Buttons */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -232,6 +233,42 @@
 				1A1463FA19447B7900614B7C /* AHEventInviteTableViewCell.m */,
 			);
 			name = EventInviteCell;
+			sourceTree = "<group>";
+		};
+		1ADC0252194A4A1700FBF75E /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				1A1463ED1944627400614B7C /* AHBorderedColorButton.h */,
+				1A1463EE1944627400614B7C /* AHBorderedColorButton.m */,
+			);
+			name = Buttons;
+			sourceTree = "<group>";
+		};
+		1ADC0253194A4A3A00FBF75E /* TextFields */ = {
+			isa = PBXGroup;
+			children = (
+				1A1463EA194455D200614B7C /* AHColoredPlaceholderTextField.h */,
+				1A1463EB194455D200614B7C /* AHColoredPlaceholderTextField.m */,
+			);
+			name = TextFields;
+			sourceTree = "<group>";
+		};
+		1ADC0254194A4A3F00FBF75E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1A1463E7194453A600614B7C /* AHColoredBorderedView.h */,
+				1A1463E8194453A600614B7C /* AHColoredBorderedView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		1ADC0257194A4E8500FBF75E /* CustomElemetns */ = {
+			isa = PBXGroup;
+			children = (
+				1ADC0258194A4F8600FBF75E /* AHCustomTextField.h */,
+				1ADC0259194A4F8600FBF75E /* AHCustomTextField.m */,
+			);
+			name = CustomElemetns;
 			sourceTree = "<group>";
 		};
 		EA8C83E919437261006793C5 = {
@@ -652,6 +689,7 @@
 				EA8C840619437261006793C5 /* AHAppDelegate.m in Sources */,
 				EA98290119439F2F004510C5 /* AHCreateEventViewController.m in Sources */,
 				1A1463EC194455D200614B7C /* AHColoredPlaceholderTextField.m in Sources */,
+				1ADC025A194A4F8600FBF75E /* AHCustomTextField.m in Sources */,
 				1A1463EF1944627400614B7C /* AHBorderedColorButton.m in Sources */,
 				EA9829041943C3BC004510C5 /* AHCreateEmailTableViewCell.m in Sources */,
 				EA8C845419437B12006793C5 /* AHPost.m in Sources */,

@@ -49,11 +49,11 @@
     UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
     [self.view addGestureRecognizer:gestureRecognizer];
     
-    // Setting Login Button State Color
-    UIView *greenBackgroundView = [[UIView alloc] initWithFrame:self.createButton.frame];
-    greenBackgroundView.backgroundColor = [UIColor colorWithRed:0.384313725f green:0.6745098f blue:0.3607843f alpha:1.0f];
-    UIImage *greenBackground = [AHUtils imageFromView:greenBackgroundView];
-    [self.createButton setBackgroundImage:greenBackground forState:UIControlStateNormal];
+//    // Setting Login Button State Color
+//    UIView *greenBackgroundView = [[UIView alloc] initWithFrame:self.createButton.frame];
+//    greenBackgroundView.backgroundColor = [UIColor colorWithRed:0.384313725f green:0.6745098f blue:0.3607843f alpha:1.0f];
+//    UIImage *greenBackground = [AHUtils imageFromView:greenBackgroundView];
+//    [self.createButton setBackgroundImage:greenBackground forState:UIControlStateNormal];
 }
 
 - (void)didReceiveMemoryWarning
@@ -101,7 +101,7 @@
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSDateComponents *components = [[NSDateComponents alloc] init];
     
-    NSLog(@"%ld / %ld / %ld", [self.bdayField.text integerValue],[self.bmonthField.text integerValue],[self.byearField.text integerValue]);
+    NSLog(@"%d / %d / %d", [self.bdayField.text integerValue],[self.bmonthField.text integerValue],[self.byearField.text integerValue]);
     
     [components setDay:[self.bdayField.text integerValue]];
     [components setMonth:[self.bmonthField.text integerValue]];
