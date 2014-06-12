@@ -101,7 +101,7 @@
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSDateComponents *components = [[NSDateComponents alloc] init];
     
-    NSLog(@"%d / %d / %d", [self.bdayField.text integerValue],[self.bmonthField.text integerValue],[self.byearField.text integerValue]);
+    NSLog(@"%ld / %ld / %ld", [self.bdayField.text integerValue],[self.bmonthField.text integerValue],[self.byearField.text integerValue]);
     
     [components setDay:[self.bdayField.text integerValue]];
     [components setMonth:[self.bmonthField.text integerValue]];

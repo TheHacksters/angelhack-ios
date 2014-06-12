@@ -103,7 +103,7 @@
     }
     
     cell.name.text = [company getName];
-    cell.numberOfUsers.text = [NSString stringWithFormat:@"%d", [company memberCount]];
+    cell.numberOfUsers.text = [NSString stringWithFormat:@"%ld", [company memberCount]];
     cell.indexPath = indexPath;
     
     if (company[@"image"]) {

@@ -66,6 +66,7 @@
 
 - (void)refreshData
 {
+//    [self makeRequest];
     _firsFetchRetruned = NO;
     PFQuery *invitesQuery = [PFQuery queryWithClassName:@"Event"];
     [invitesQuery whereKey:@"company" equalTo:self.user.selectedCompany];
@@ -87,32 +88,40 @@
     }];
 }
 
+- (void)makeRequest
+{
+    PFQuery *invitesQuery = [PFQuery queryWithClassName:@"Event"];
+    [invitesQuery whereKey:@"invited" equalTo:self.user];
+    PFQuery *eventsQuery = [PFQuery queryWithClassName:@"Event"];
+    [eventsQuery whereKey:@"confirmed" equalTo:self.user];
+    
+    PFQuery *compoundQuery = [PFQuery orQueryWithSubqueries:@[invitesQuery, eventsQuery]];
+    [compoundQuery whereKey:@"company" equalTo:self.user.selectedCompany];
+    [compoundQuery orderByAscending:@"date"];
+    [compoundQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            NSLog(@"Error %@", error);
+        } else {
+            NSLog(@"Events Fetched!");
+            [self filterResults:objects];
+        }
+    }];
+}
+
+- (void)filterResults:(NSArray *)resutls
+{
+    // No futuro fazer um js no cloud code que retorna o array ja filtrado.
+    for (AHEvent *event in resutls) {
+        //
+    }
+}
+
 - (void)reloadIfDataFetched
 {
     if (_firsFetchRetruned) {
         [self.tableView reloadData];
     }
 }
-
-//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-//        PFQuery *query = [PFQuery queryWithClassName:@"Event"];
-//        [query whereKey:@"company" equalTo:self.user.selectedCompany];
-//        [query whereKey:@"invited" equalTo:self.user];
-//        NSArray *invitedEvents = [query findObjects];
-//        dispatch_async(dispatch_get_main_queue(), ^{
-//            self.eventInvitations = invitedEvents;
-//            [self.tableView reloadData];
-//        });
-//        query = [PFQuery queryWithClassName:@"Event"];
-//        [query whereKey:@"company" equalTo:self.user.selectedCompany];
-//        [query whereKey:@"confirmed" equalTo:self.user];
-//        NSArray *events = [query findObjects];
-//        dispatch_async(dispatch_get_main_queue(), ^{
-//            self.events = events;
-//            [self.tableView reloadData];
-//        });
-//    });
-//}
 
 - (void)didReceiveMemoryWarning
 {
@@ -149,7 +158,7 @@
         identifier = eventInviteCellIdentifier;
         AHEventInviteTableViewCell *cell = (AHEventInviteTableViewCell *)[tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
         cell.name.text = [event getName];
-        cell.numberOfMembers.text = [NSString stringWithFormat:@"%d", [event invitedMembersCount]];
+        cell.numberOfMembers.text = [NSString stringWithFormat:@"%d", [event confirmedMembersCount]];
         cell.indexPath = indexPath;
         cell.delegate = self;
         cell.type = [event getType];
@@ -193,19 +202,19 @@
 #pragma mark - AHEventInviteTableCell Delegate
 - (void)eventInviteTableCellCancelButtonTouchedAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"Canceld at IndexPath(%d, %d)", indexPath.section, indexPath.row);
+    NSLog(@"Canceld at IndexPath(%ld, %ld)", indexPath.section, indexPath.row);
 }
 
 - (void)eventInviteTableCellConfirmButtonTouchedAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"Confirmed at IndexPath(%d, %d)", indexPath.section, indexPath.row);
+    NSLog(@"Confirmed at IndexPath(%ld, %ld)", indexPath.section, indexPath.row);
 }
 
 
 #pragma mark - Navigation
 - (void)selectEventAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"Selected Event at IndexPath(%d, %d)", indexPath.section, indexPath.row);
+    NSLog(@"Selected Event at IndexPath(%ld, %ld)", indexPath.section, indexPath.row);
     //self.user.selectedCompany = [self.companies objectAtIndex:indexPath.row];
     //[self performSegueWithIdentifier:@"pushCompanyEventsSegue" sender:self];
 }

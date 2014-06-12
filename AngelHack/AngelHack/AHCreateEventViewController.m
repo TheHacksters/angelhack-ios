@@ -115,7 +115,7 @@
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSDateComponents *components = [[NSDateComponents alloc] init];
     
-    NSLog(@"%d / %d / %d", [self.eventDayTextField.text integerValue],[self.eventMonthTextField.text integerValue],[self.eventYearTextField.text integerValue]);
+    NSLog(@"%ld / %ld / %ld", [self.eventDayTextField.text integerValue],[self.eventMonthTextField.text integerValue],[self.eventYearTextField.text integerValue]);
     
     [components setDay:[self.eventDayTextField.text integerValue]];
     [components setMonth:[self.eventMonthTextField.text integerValue]];
@@ -126,7 +126,7 @@
     
     
     AHEvent *newEvent = [[AHEvent alloc] initWithName:self.eventNameTextField.text Type:self.selectedEventType Date:date Location:self.eventLocationTextField.text andCompany:[AHUser currentUser].selectedCompany];
-    
+    NSLog(@"Event Created: %@", newEvent);
     
 }
 

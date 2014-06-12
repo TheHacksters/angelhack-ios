@@ -84,7 +84,7 @@
     self.image.backgroundColor = [UIColor colorWithRed:202.0f/255.0f green:158.0f/255.0f blue:72.0f/255.0f alpha:1.0f];
 }
 - (void)sportsTab {
-    self.image.image = [UIImage imageNamed:@"ic_big_sports"];
+    self.image.image = [UIImage imageNamed:@"ic_big_sport"];
     self.image.backgroundColor = [UIColor colorWithRed:61.0f/255.0f green:156.0f/255.0f blue:85.0f/255.0f alpha:1.0f];
 }
 - (void)coffeeTab {

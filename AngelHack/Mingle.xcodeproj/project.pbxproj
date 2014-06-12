@@ -342,6 +342,7 @@
 		EA8C842C19437295006793C5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				EA9828C619439B9A004510C5 /* Events */,
 				EA9828C519439B84004510C5 /* Company */,
 				EA9828C219439B43004510C5 /* Profile */,
 				EA9828C119439B3A004510C5 /* Companies */,
@@ -449,7 +450,6 @@
 			children = (
 				EA9828C919439BC9004510C5 /* HallBadges */,
 				EA9828C819439BC0004510C5 /* CoWorkers */,
-				EA9828C619439B9A004510C5 /* Events */,
 			);
 			name = Company;
 			sourceTree = "<group>";
