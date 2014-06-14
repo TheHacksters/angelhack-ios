@@ -12,6 +12,9 @@
 #import "AHEvent.h"
 #import "AHUser.h"
 
+#define TABLEVIEW_SECTION_HEADER_HEIGHT 32
+#define TABLEVIEW_SECTION_HEADER_FONT_SIZE 15
+
 @interface AHMyEventsViewController () <UITableViewDataSource, UITableViewDelegate, AHEventCellTableCellDelegate, AHEventInviteTableCellDelegate> {
     BOOL _firsFetchRetruned;
 }
@@ -113,6 +116,8 @@
     // No futuro fazer um js no cloud code que retorna o array ja filtrado.
     for (AHEvent *event in resutls) {
         //
+        NSDate *date = event[@"date"];
+        //date
     }
 }
 
@@ -177,20 +182,62 @@
         return cell;
     }
 }
-
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-    if (section == 0) {
-        return @"New Events";
-    } else {
-        return @"My Events";
-    }
-}
+//
+//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+//{
+//    if (section == 0) {
+//        return @"New Events";
+//    } else {
+//        return @"My Events";
+//    }
+//}
 
 #pragma mark - UITableView Delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [self selectEventAtIndexPath:indexPath];
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UIView *headerView;
+    
+    if ([tableView numberOfRowsInSection:section] > 0) {
+        
+        // Header View
+        headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, TABLEVIEW_SECTION_HEADER_HEIGHT)];
+        
+        // Header Label
+        UILabel *headerLabel = [[UILabel alloc] initWithFrame:CGRectMake(16, 10, tableView.frame.size.width, TABLEVIEW_SECTION_HEADER_FONT_SIZE)];
+        headerLabel.font = [UIFont italicSystemFontOfSize:16];
+        headerLabel.textColor = [UIColor whiteColor];
+        if (section == 0) {
+            headerLabel.text = @"New Events";
+        } else {
+            headerLabel.text = @"My Events";
+        }
+        [headerLabel sizeToFit];
+        [headerView addSubview:headerLabel];
+        
+        // Header Line
+        CGFloat x = CGRectGetMaxX(headerLabel.frame) + 2;
+        CGFloat y = CGRectGetMaxY(headerLabel.frame) - 5;
+        CGFloat width = tableView.frame.size.width - x;
+        UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(x, y, width, 1.0f)];
+        lineView.backgroundColor = [UIColor whiteColor];
+        
+        [headerView addSubview:lineView];
+        
+    } else {
+        headerView = nil;
+    }
+
+    return headerView;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return TABLEVIEW_SECTION_HEADER_HEIGHT;
 }
 
 #pragma mark - AHEventTableCell Delegate
