@@ -780,14 +780,14 @@
                                     <segue destination="NAT-Bq-TXU" kind="push" id="fed-th-SI2"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" delaysContentTouches="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="73" sectionHeaderHeight="26" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="JHT-T2-3sf">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="73" sectionHeaderHeight="32" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="JHT-T2-3sf">
                                 <rect key="frame" x="0.0" y="64" width="320" height="420"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.50588238240000005" green="0.67450982329999998" blue="0.77254903320000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.50588238240000005" green="0.67450982329999998" blue="0.77254903320000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AHEventInviteTableViewCell" rowHeight="73" id="XfS-FE-FVT" customClass="AHEventInviteTableViewCell">
-                                        <rect key="frame" x="0.0" y="26" width="320" height="73"/>
+                                        <rect key="frame" x="0.0" y="32" width="320" height="73"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XfS-FE-FVT" id="5wQ-uo-hLm">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="73"/>
@@ -861,7 +861,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AHMyEventTableViewCell" rowHeight="73" id="P7Q-b2-zkR" customClass="AHMyEventTableViewCell">
-                                        <rect key="frame" x="0.0" y="99" width="320" height="73"/>
+                                        <rect key="frame" x="0.0" y="105" width="320" height="73"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="P7Q-b2-zkR" id="qMd-yu-qO2">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="73"/>

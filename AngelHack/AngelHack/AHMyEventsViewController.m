@@ -12,6 +12,8 @@
 #import "AHEvent.h"
 #import "AHUser.h"
 
+#import <QuartzCore/QuartzCore.h>
+
 #define TABLEVIEW_SECTION_HEADER_HEIGHT 32
 #define TABLEVIEW_SECTION_HEADER_FONT_SIZE 15
 
@@ -182,15 +184,6 @@
         return cell;
     }
 }
-//
-//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-//{
-//    if (section == 0) {
-//        return @"New Events";
-//    } else {
-//        return @"My Events";
-//    }
-//}
 
 #pragma mark - UITableView Delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -200,13 +193,30 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
+    UIView *headerContainerView;
     UIView *headerView;
     
     if ([tableView numberOfRowsInSection:section] > 0) {
-        
+    
+        // Header Container View
+        headerContainerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, TABLEVIEW_SECTION_HEADER_HEIGHT)];
+        headerContainerView.backgroundColor = [UIColor clearColor];
+    
         // Header View
-        headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, TABLEVIEW_SECTION_HEADER_HEIGHT)];
+        headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, TABLEVIEW_SECTION_HEADER_HEIGHT - 4.0f)];
         
+        UIBezierPath *shadowPath = [UIBezierPath bezierPathWithRect:headerView.bounds];
+        headerView.layer.masksToBounds = NO;
+        headerView.layer.shadowColor = self.navBar.barTintColor.CGColor;//[UIColor blackColor].CGColor;
+        headerView.layer.shadowOffset = CGSizeMake(0.0f, 3.0f);
+        headerView.layer.shadowOpacity = 0.9f;
+        headerView.layer.shadowRadius = 3.0f;
+        headerView.layer.shadowPath = shadowPath.CGPath;
+        
+        headerView.backgroundColor = self.view.backgroundColor;
+    
+        [headerContainerView addSubview:headerView];
+    
         // Header Label
         UILabel *headerLabel = [[UILabel alloc] initWithFrame:CGRectMake(16, 10, tableView.frame.size.width, TABLEVIEW_SECTION_HEADER_FONT_SIZE)];
         headerLabel.font = [UIFont italicSystemFontOfSize:16];
@@ -229,10 +239,10 @@
         [headerView addSubview:lineView];
         
     } else {
-        headerView = nil;
+        headerContainerView = [[UIView alloc] initWithFrame:CGRectZero];
     }
 
-    return headerView;
+    return headerContainerView;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
@@ -249,19 +259,19 @@
 #pragma mark - AHEventInviteTableCell Delegate
 - (void)eventInviteTableCellCancelButtonTouchedAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"Canceld at IndexPath(%ld, %ld)", indexPath.section, indexPath.row);
+//    NSLog(@"Canceld at IndexPath(%ld, %ld)", indexPath.section, indexPath.row);
 }
 
 - (void)eventInviteTableCellConfirmButtonTouchedAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"Confirmed at IndexPath(%ld, %ld)", indexPath.section, indexPath.row);
+//    NSLog(@"Confirmed at IndexPath(%ld, %ld)", indexPath.section, indexPath.row);
 }
 
 
 #pragma mark - Navigation
 - (void)selectEventAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"Selected Event at IndexPath(%ld, %ld)", indexPath.section, indexPath.row);
+//    NSLog(@"Selected Event at IndexPath(%ld, %ld)", indexPath.section, indexPath.row);
     //self.user.selectedCompany = [self.companies objectAtIndex:indexPath.row];
     //[self performSegueWithIdentifier:@"pushCompanyEventsSegue" sender:self];
 }
