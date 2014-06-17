@@ -31,6 +31,7 @@
 @property (weak, nonatomic) IBOutlet UINavigationBar *navBar;
 @property (weak, nonatomic) IBOutlet UINavigationItem *navItem;
 
+@property (weak, nonatomic) IBOutlet UIView *bottomView;
 
 @end
 
@@ -61,6 +62,16 @@
     
     NSString *title = [self.user.selectedCompany getName];
     self.navItem.title = title;
+    
+    // Bottom view Shadow
+    
+    UIBezierPath *shadowPath = [UIBezierPath bezierPathWithRect:self.bottomView.bounds];
+    self.bottomView.layer.masksToBounds = NO;
+    self.bottomView.layer.shadowColor = self.navBar.barTintColor.CGColor;//[UIColor blackColor].CGColor;
+    self.bottomView.layer.shadowOffset = CGSizeMake(0.0f, -1.0f);
+    self.bottomView.layer.shadowOpacity = 0.9f;
+    self.bottomView.layer.shadowRadius = 2.0f;
+    self.bottomView.layer.shadowPath = shadowPath.CGPath;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -203,7 +214,7 @@
         headerContainerView.backgroundColor = [UIColor clearColor];
     
         // Header View
-        headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, TABLEVIEW_SECTION_HEADER_HEIGHT - 4.0f)];
+        headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, TABLEVIEW_SECTION_HEADER_HEIGHT - 5.0f)];
         
         UIBezierPath *shadowPath = [UIBezierPath bezierPathWithRect:headerView.bounds];
         headerView.layer.masksToBounds = NO;
